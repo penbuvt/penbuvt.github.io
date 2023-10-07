@@ -1,0 +1,61 @@
+{% extends "juice/templates/index.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ get_url(path="penbu.css") }}">
+{% endblock head %}
+
+{% block header %}
+
+<header class="pos-absolute" style="background-color: transparent">
+    {{ macros::render_header() }}
+</header>
+
+<div class="hero">
+    {% block hero %}
+    <div class="hero-content">
+        <section class="text-center">
+            <h1 class="heading-text main-header">
+                <img class="hero-logo" src="{{ get_url(path="images/penbu-logo-gradient-large.png") }}" alt="Penbu" />
+            </h1>
+            <h3 class="title-text">
+                Programming, puzzle-gaming, music-making vtuber on Linux.
+            </h3>
+            <div class="socials">
+                <a class="social-icon" href="https://www.youtube.com/@PenbuVT">
+                    <img class="monochrome" width="64" height="64" src="{{ get_url(path="images/social-icons/youtube.svg") }}" alt="YouTube" />
+                    <img class="color" width="64" height="64" src="{{ get_url(path="images/social-icons/youtube-color.svg") }}" alt="YouTube" />
+                </a>
+                <a class="social-icon" href="https://twitch.tv/penbuvt">
+                    <img class="monochrome" width="64" height="64" src="{{ get_url(path="images/social-icons/twitch.svg") }}" alt="Twitch" />
+                    <img class="color" width="64" height="64" src="{{ get_url(path="images/social-icons/twitch-color.svg") }}" alt="Twitch" />
+                </a>
+                <a class="social-icon" href="https://discord.gg/X5XZDfBSPG">
+                    <img class="monochrome" width="64" height="64" src="{{ get_url(path="images/social-icons/discord.svg") }}" alt="Discord" />
+                    <img class="color" width="64" height="64" src="{{ get_url(path="images/social-icons/discord-color.svg") }}" alt="Discord" />
+                </a>
+                <a class="social-icon" href="https://twitter.com/penbuvt">
+                    <img class="monochrome" width="64" height="64" src="{{ get_url(path="images/social-icons/x.svg") }}" alt="X (Twitter)" />
+                    <img class="color" width="64" height="64" src="{{ get_url(path="images/social-icons/x-color.svg") }}" alt="X (Twitter)" />
+                </a>
+                <a class="social-icon" href="https://github.com/penbuvt">
+                    <img class="monochrome" width="64" height="64" src="{{ get_url(path="images/social-icons/github.svg") }}" alt="GitHub" />
+                    <img class="color" width="64" height="64" src="{{ get_url(path="images/social-icons/github-color.svg") }}" alt="GitHub" />
+                </a>
+            </div>
+        </section>
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=wsBxzCGjS0YGdBaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </div>
+    {% endblock hero %}
+    <a href="#features" id="explore-more" class="explore-more text">Explore More ⇩</a>
+    <script>
+        document.getElementById("explore-more").addEventListener("click", (event) => {
+            event.preventDefault();
+            const target = new URL(event.target.href).hash;
+            document.querySelector(target).scrollIntoView({ behavior: "smooth" });
+        }, true);
+    </script>
+</div>
+
+{% endblock header %}
