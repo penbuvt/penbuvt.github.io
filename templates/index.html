@@ -13,7 +13,7 @@
 <div class="hero">
     {% block hero %}
     <div class="hero-content">
-        <section class="text-center">
+        <section class="hero-left text-center">
             <h1 class="heading-text main-header">
                 <img class="hero-logo" src="{{ get_url(path="images/penbu-logo-gradient-large.png") }}" alt="Penbu" />
             </h1>
@@ -38,8 +38,8 @@
                 </a>
             </div>
         </section>
-        <section>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=wsBxzCGjS0YGdBaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <section class="hero-right">
+            <iframe class="featured-video" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=wsBxzCGjS0YGdBaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
     </div>
     {% endblock hero %}
