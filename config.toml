@@ -19,3 +19,4 @@ highlight_code = true
 # Put all your custom variables here
 juice_logo_path = ""
 juice_logo_name = ""
+penbu_source_repo = "https://github.com/penbuvt/penbuvt.github.io"
