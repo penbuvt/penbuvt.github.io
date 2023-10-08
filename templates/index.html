@@ -6,9 +6,8 @@
 
 {% block header %}
 
-<header class="pos-absolute" style="background-color: transparent">
-    {{ macros::render_header() }}
-</header>
+{% block navmenu %}
+{% endblock navmenu %}
 
 <div class="hero">
     {% block hero %}
@@ -54,6 +53,18 @@
 </div>
 
 {% endblock header %}
+
+{% block content %}
+<style>
+body > main {
+    display: none;
+}
+
+.explore-more {
+    display: none !important;
+}
+</style>
+{% endblock content %}
 
 {% block footer %}
 <footer>
