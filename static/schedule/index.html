@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2023-W42",
+        "events": [
+          {
+            "type": "stream",
+            "title": "Debut",
+            "url": "https://www.youtube.com/watch?v=eYI0vR8Iygc",
+            "datetime": "2023-10-16T19:30:00-0400",
+            "id": "79c3cfba-79f0-4862-91d4-fa01050f6c69"
+          },
+          {
+            "type": "stream",
+            "title": "Programming (with npm packages only!)",
+            "url": "https://www.youtube.com/watch?v=RatX2I3Pm6A",
+            "datetime": "2023-10-18T19:30:00-0400",
+            "id": "cc9b76da-86ae-4e8d-b0df-e45b595d8d62"
+          },
+          {
+            "type": "stream",
+            "title": "Tetris 99",
+            "url": "https://www.youtube.com/watch?v=SCuogVAVi6o",
+            "datetime": "2023-10-19T19:30:00-0400",
+            "id": "cd4efd20-985f-419e-a1c1-afb8bdfa01c4"
+          },
+          {
+            "type": "stream",
+            "title": "Piano Improv",
+            "url": "https://www.youtube.com/watch?v=cQbUK4kzJhA",
+            "datetime": "2023-10-20T19:30:00-0400",
+            "id": "170e6057-0e28-48bf-9d4f-772c5c9dbd65"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule"></div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
