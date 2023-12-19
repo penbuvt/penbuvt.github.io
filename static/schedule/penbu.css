@@ -111,6 +111,10 @@
   justify-content: space-evenly;
 }
 
+.schedule-events > hr {
+  width: 100%;
+}
+
 .event {
   background-color: var(--InfoWindow);
   color: var(--InfoText);

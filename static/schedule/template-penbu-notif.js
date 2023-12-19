@@ -38,7 +38,12 @@
 
       const eventsContainer = template.getElementById('schedule-events');
 
-      const renderedEvents = data.events.map((event) => this.renderEvent(event));
+      const renderedEvents = data.events.map((event) => (
+        {
+          stream: () => this.renderEvent(event),
+          separator: () => document.createElement('hr'),
+        }[event.type]?.() ?? ''
+      ));
       eventsContainer.append(...renderedEvents);
 
       mountPoint.replaceChildren(template);
