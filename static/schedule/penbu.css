@@ -126,6 +126,11 @@
   overflow: hidden;
 }
 
+.event.preview {
+  border-style: dashed;
+  opacity: 0.8;
+}
+
 .title {
   font-weight: bold;
   margin: 0;

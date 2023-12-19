@@ -54,10 +54,13 @@
       title,
       url,
       datetime,
+      tags = [],
     }) {
       const eventFragment = this.eventTemplate.content.cloneNode(true);
 
-      eventFragment.getElementById('event').id = id;
+      const eventElement = eventFragment.getElementById('event');
+      eventElement.id = id;
+      eventElement.classList.add(...tags);
 
       const videoIdElement = eventFragment.getElementById('video-id');
       videoIdElement.id = 'video-id-' + id;
