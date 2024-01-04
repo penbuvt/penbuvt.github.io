@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2024-W01",
+        "events": [
+          {
+            "type": "stream",
+            "title": "Programming without statements",
+            "url": "https://www.youtube.com/watch?v=xmbEP9kF7dY",
+            "datetime": "2024-01-04T19:30:00-0500",
+            "id": "44ld55bu6kvb4g050gj987giv2@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Patrick's Parabox",
+            "url": "https://www.youtube.com/watch?v=p2DbdcC20xw",
+            "datetime": "2024-01-05T19:30:00-0500",
+            "id": "1vqp09m7oeqbar5tf12rpmf68a@google.com"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "type": "stream",
+            "title": "TETR.IO",
+            "url": "https://www.youtube.com/watch?v=MHHtkHIR0n4",
+            "datetime": "2024-01-11T19:30:00-0500",
+            "id": "1kuadl0gsbuqfolm8hg72f64ln@google.com",
+            "tags": ["preview"]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
