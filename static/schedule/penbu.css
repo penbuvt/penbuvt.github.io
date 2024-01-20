@@ -59,8 +59,13 @@
   text-decoration: underline;
 }
 
-.schedule .video-id {
+.schedule .locations {
   float: right;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.schedule .video-id {
   font-size: 0.5em;
   font-family: "DejaVu Sans Mono", monospace;
   white-space: nowrap;

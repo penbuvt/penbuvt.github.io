@@ -21,7 +21,8 @@
 `);
       this.eventTemplate = createTemplateFromString(`
 <div id="event" class="event">
-  <span id="video-id" class="video-id"></span>
+  <div id="locations" class="locations">
+  </div>
   <h3 id="title" class="title"></h3>
   <div id="content" class="content">
     <p id="local-time" class="event-start"><span class="time-label">Local:</span> </p>
@@ -53,6 +54,7 @@
       id,
       title,
       url,
+      otherUrls = [],
       datetime,
       tags = [],
     }) {
@@ -62,8 +64,8 @@
       eventElement.id = id;
       eventElement.classList.add(...tags);
 
-      const videoIdElement = eventFragment.getElementById('video-id');
-      videoIdElement.id = 'video-id-' + id;
+      const locationsElement = eventFragment.getElementById('locations');
+      locationsElement.id = 'locations-' + id;
 
       if (url) {
         const parsedUrl = new URL(url);
@@ -79,8 +81,31 @@
 
         const videoId = parsedUrl.searchParams.get('v');
 
+        const videoIdElement = document.createElement('span');
+        videoIdElement.classList.add('video-id');
         videoIdElement.append(socialIcon, ' ', videoId);
+        locationsElement.append(videoIdElement);
       }
+
+      otherUrls.forEach((otherUrl) => {
+        const parsedUrl = new URL(otherUrl);
+
+        const socialIcon = document.createElement('img');
+        socialIcon.width = 16;
+        socialIcon.height = 16;
+
+        // Assume full Twitch user URL: https://www.twitch.tv/<user>
+        // TODO: support other services
+        socialIcon.src = '/images/social-icons/twitch.svg';
+        socialIcon.alt = 'TTV:';
+
+        const user = parsedUrl.pathname.split('/')[1];
+
+        const videoIdElement = document.createElement('span');
+        videoIdElement.classList.add('video-id');
+        videoIdElement.append(socialIcon, ' ', user);
+        locationsElement.append(videoIdElement);
+      });
 
       const titleElement = eventFragment.getElementById('title');
       titleElement.id = 'title-' + id;
