@@ -16,5 +16,10 @@
   footer {
     background-color: #202020;
     color: white;
+    height: 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
