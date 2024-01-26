@@ -20,7 +20,7 @@
   const videoId = new URL(url).searchParams.get('v');
 </script>
 
-<ConditionalAnchor href={url}>
+<ConditionalAnchor href={url} class="event-anchor">
   <div {id} class="event {tags.join(" ")}">
     <div id="location-{id}" class="locations">
       {#if url}
@@ -39,6 +39,17 @@
 </ConditionalAnchor>
 
 <style lang="scss">
+  :global(a.event-anchor) {
+    color: inherit;
+    text-decoration: none;
+
+    :hover,
+    :focus {
+      color: var(--HotTrackingColor);
+      text-decoration: underline;
+    }
+  }
+
   .event {
     background-color: var(--InfoWindow);
     color: var(--InfoText);

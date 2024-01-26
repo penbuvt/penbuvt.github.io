@@ -113,24 +113,6 @@
     text-decoration: underline;
   }
 
-  .schedule .locations {
-    float: right;
-    display: inline-flex;
-    flex-direction: column;
-  }
-
-  .schedule .video-id {
-    font-size: 0.5em;
-    font-family: "DejaVu Sans Mono", monospace;
-    white-space: nowrap;
-  }
-
-  .schedule .video-id img {
-    width: 1em;
-    height: auto;
-    vertical-align: middle;
-  }
-
   .schedule-contents {
     flex-grow: 1;
 
