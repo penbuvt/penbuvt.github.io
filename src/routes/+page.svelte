@@ -21,5 +21,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    a {
+      color: white;
+    }
   }
 </style>
