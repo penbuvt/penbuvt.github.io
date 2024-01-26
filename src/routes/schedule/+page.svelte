@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Event from '$lib/schedule/event.svelte';
+
   const data = {
     "version": "1.0",
     "title": "Schedule for 2024-W04",
@@ -35,7 +37,11 @@
       <h2 id="title" class="logo">{data.title}</h2>
       <p>See the latest at <a href="/schedule">penbuvt.ca/schedule</a></p>
     </div>
-    <div id="schedule-events" class="schedule-events"></div>
+    <div id="schedule-events" class="schedule-events">
+      {#each data.events as event}
+        <Event {event} />
+      {/each}
+    </div>
   </main>
   <footer class="socials">
     <a href="https://www.youtube.com/@PenbuVT"><img src="/images/social-icons/youtube.svg" alt="YouTube:" width="24" height="24" class="social-icon" /> @PenbuVT</a>
@@ -168,57 +174,6 @@
     width: 100%;
   }
 
-  .event {
-    background-color: var(--InfoWindow);
-    color: var(--InfoText);
-    padding: 1ex;
-    border: 2px ridge var(--ButtonFace);
-    border-radius: 8px;
-    box-shadow: 8px 8px 8px 0 #55575380;
-    margin: 0 8px 8px 0;
-    overflow: hidden;
-  }
-
-  .event.preview {
-    border-style: dashed;
-    opacity: 0.8;
-  }
-
-  .title {
-    font-weight: bold;
-    margin: 0;
-  }
-
-  .content {
-    display: table;
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
-
-  .content > * {
-    display: table-row;
-  }
-
-  .content > * > * {
-    display: table-cell;
-  }
-
-  .content > * > * + * {
-    padding-left: 1ex;
-  }
-
-  .content p {
-    margin: 0;
-  }
-
-  .content .event-start {
-    font-size: smaller;
-  }
-
-  .content .time-label {
-    text-align: right;
-  }
 
   .schedule footer {
     display: flex;
