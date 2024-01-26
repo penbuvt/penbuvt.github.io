@@ -1,8 +1,17 @@
 <div>
   <main>
     <div class="hero">
-      <section></section>
-      <section></section>
+      <section>
+        <h1 class="main-header">
+          Penbu
+        </h1>
+        <h2 class="subtitle">
+          Programming, puzzle-gaming, music-making vtuber on Linux.
+        </h2>
+      </section>
+      <section>
+        <iframe class="featured-video" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=PXGk0Hhs4F723Dn2&amp;list=UUPV8mWVjn4ZXjlb3DVnL-bysQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </section>
     </div>
   </main>
   <footer>
@@ -36,7 +45,7 @@
     min-height: 100vh;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 40px;
+    padding: 0 2rem;
     gap: 2em;
   }
 
