@@ -1,5 +1,9 @@
 <div>
   <main>
+    <div class="hero">
+      <section></section>
+      <section></section>
+    </div>
   </main>
   <footer>
     <small>
@@ -12,6 +16,7 @@
   @use 'sass:math';
 
   main {
+    display: flex;
     height: 100vh;
 
     background-color: #729fcf;
@@ -21,6 +26,18 @@
       #729fcf,
       #8ae23480
     );
+  }
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 40px;
+    gap: 2em;
   }
 
   footer {
