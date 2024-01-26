@@ -1,8 +1,38 @@
+<script lang="ts">
+  const data = {
+    "version": "1.0",
+    "title": "Schedule for 2024-W04",
+    "events": [
+      {
+        "type": "stream",
+        "title": "Mini Metro",
+        "url": "https://www.youtube.com/watch?v=m6gWuOhcViw",
+        "datetime": "2024-01-24T19:30:00-0500",
+        "id": "09brkmc5qq2h7jrijuv8k1tmlf@google.com"
+      },
+      {
+        "type": "stream",
+        "title": "Converting website to Svelte",
+        "url": "https://www.youtube.com/watch?v=AbRPlkLFcBs",
+        "datetime": "2024-01-25T19:30:00-0500",
+        "id": "51k7k6q6ng08g5vrhigtfesn0d@google.com"
+      },
+      {
+        "type": "stream",
+        "title": "Arranging Suisei's \"Pieces\"",
+        "url": "https://www.youtube.com/watch?v=Wk_vfMp4GEo",
+        "datetime": "2024-01-26T19:30:00-0500",
+        "id": "0ttdajsu5i3344o4bleklgltu3@google.com"
+      }
+    ]
+  };
+</script>
+
 <div id="schedule" class="schedule">
   <main class="schedule-contents">
     <div class="schedule-info">
       <h1 class="logo"><a href="/"><img src="/images/penbu-logo-gradient-large.png" alt="Penbu" class="logo-image" /></a></h1>
-      <h2 id="title" class="logo"></h2>
+      <h2 id="title" class="logo">{data.title}</h2>
       <p>See the latest at <a href="/schedule">penbuvt.ca/schedule</a></p>
     </div>
     <div id="schedule-events" class="schedule-events"></div>
