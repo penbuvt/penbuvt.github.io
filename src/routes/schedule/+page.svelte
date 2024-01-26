@@ -1,7 +1,18 @@
 <div id="schedule" class="schedule">
-  <div style="margin: auto; padding: 1em; text-align: center;">
-    This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
-  </div>
+  <main class="schedule-contents">
+    <div class="schedule-info">
+      <h1 class="logo"><a href="/"><img src="/images/penbu-logo-gradient-large.png" alt="Penbu" class="logo-image" /></a></h1>
+      <h2 id="title" class="logo"></h2>
+      <p>See the latest at <a href="/schedule">penbuvt.ca/schedule</a></p>
+    </div>
+    <div id="schedule-events" class="schedule-events"></div>
+  </main>
+  <footer class="socials">
+    <a href="https://www.youtube.com/@PenbuVT"><img src="/images/social-icons/youtube.svg" alt="YouTube:" width="24" height="24" class="social-icon" /> @PenbuVT</a>
+    <a href="https://twitter.com/PenbuVT"><img src="/images/social-icons/x.svg" alt="X (Twitter):" width="24" height="24" class="social-icon" /> @PenbuVT</a>
+    <a href="https://discord.gg/X5XZDfBSPG"><img src="/images/social-icons/discord.svg" alt="Discord:" width="24" height="24" class="social-icon" /> discord.gg/X5XZDfBSPG</a>
+    <a href="https://www.penbuvt.ca">penbuvt.ca</a>
+  </footer>
 </div>
 
 <style lang="scss">
