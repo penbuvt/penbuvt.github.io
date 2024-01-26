@@ -15,11 +15,20 @@
   // Dates (local, UTC)
 
   const date = new Date(datetime);
+
+
+  const videoId = new URL(url).searchParams.get('v');
 </script>
 
 <ConditionalAnchor href={url}>
   <div {id} class="event {tags.join(" ")}">
     <div id="location-{id}" class="locations">
+      {#if url}
+        <span class="video-id">
+          <img width="16" height="16" src="/images/social-icons/youtube.svg" alt="YT: " />
+          {videoId}
+        </span>
+      {/if}
     </div>
     <h3 id="title-{id}" class="title">{title}</h3>
     <div id="content-{id}" class="content">
@@ -46,6 +55,24 @@
     opacity: 0.8;
   }
 
+  .locations {
+    float: right;
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .video-id {
+    font-size: 0.5em;
+    font-family: "DejaVu Sans Mono", monospace;
+    white-space: nowrap;
+
+    img {
+      width: 1em;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+
   .title {
     font-weight: bold;
     margin: 0;
@@ -67,7 +94,7 @@
   }
 
   .content > * > * + * {
-    padding-left: 1ex;
+padding-left: 1ex;
   }
 
   .content p {
