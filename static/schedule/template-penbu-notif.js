@@ -42,6 +42,7 @@
       const renderedEvents = data.events.map((event) => (
         {
           stream: () => this.renderEvent(event),
+          premiere: () => this.renderEvent(event),
           separator: () => document.createElement('hr'),
         }[event.type]?.() ?? ''
       ));
