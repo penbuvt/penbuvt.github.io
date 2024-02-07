@@ -8,15 +8,7 @@
 
 {% block navmenu %}
 <header>
-    <a href="{{ get_url(path="") }}">
-        <div class="logo">
-            <img src="{{ get_url(path="images/penbu-logo-gradient-large.png") }}" alt="Penbu" class="logo-image" />
-        </div>
-    </a>
-
-    <nav>
-        <a class="nav-item subtitle-text" href="{{ get_url(path="schedule/", trailing_slash=true) }}">Schedule</a>
-    </nav>
+    {{ macros::render_header() }}
 </header>
 {% endblock navmenu %}
 
@@ -92,7 +84,7 @@ header {
 {% block footer %}
 <footer>
     <small class="subtext">
-        © 2023 PenbuVT. View the source on <a href="{{ config.extra.penbu_source_repo }}">GitHub</a>.
+        © 2023-2024 PenbuVT. View the source on <a href="{{ config.extra.penbu_source_repo }}">GitHub</a>.
     </small>
 </footer>
 {% endblock footer %}

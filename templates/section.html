@@ -1,0 +1,25 @@
+{% import "_macros.html" as macros %}
+{% extends "index.html" %}
+
+{% block title %}{{ section.title }} | {{ super() }} {% endblock title %}
+
+{% block header %}
+{% block navmenu %}
+<header>
+    {{ macros::render_header() }}
+</header>
+{% endblock navmenu %}
+{% endblock header %}
+
+{% block content %}
+<div class="heading-text">{{ section.title }}</div>
+{{ section.content | safe }}
+
+<h2 id="pages">Pages</h2>
+
+<ul>
+{% for page in section.pages %}
+  <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}

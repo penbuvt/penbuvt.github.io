@@ -1,8 +1,15 @@
+{% import "_macros.html" as macros %}
 {% extends "juice/templates/page.html" %}
 
-
+{% block header %}
 {% block navmenu %}
-<header class="pos-absolute" style="background-color: transparent">
+<header>
     {{ macros::render_header() }}
 </header>
 {% endblock navmenu %}
+{% endblock header %}
+
+{% block content %}
+<h1 class="heading-text">{{ page.title }}</h1>
+{{ page.content | safe }}
+{% endblock content %}
