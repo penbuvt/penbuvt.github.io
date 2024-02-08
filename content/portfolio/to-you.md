@@ -33,7 +33,7 @@ The score was created with [MuseScore 3](https://musescore.org/) and rendered wi
 * Parts
   * Piano: [PDF][piano-pdf],  [FLAC][piano-flac], [MP3][piano-mp3], [OGG][piano-ogg], [MIDI][piano-mid], [MusicXML (MXL)][piano-mxl]
   * Violin 1: [PDF][violin_1-pdf],  [FLAC][violin_1-flac], [MP3][violin_1-mp3], [OGG][violin_1-ogg], [MIDI][violin_1-mid], [MusicXML (MXL)][violin_1-mxl]
-  * Violin 1: [PDF][violin_2-pdf],  [FLAC][violin_2-flac], [MP3][violin_2-mp3], [OGG][violin_2-ogg], [MIDI][violin_2-mid], [MusicXML (MXL)][violin_2-mxl]
+  * Violin 2: [PDF][violin_2-pdf],  [FLAC][violin_2-flac], [MP3][violin_2-mp3], [OGG][violin_2-ogg], [MIDI][violin_2-mid], [MusicXML (MXL)][violin_2-mxl]
   * Viola: [PDF][viola-pdf],  [FLAC][viola-flac], [MP3][viola-mp3], [OGG][viola-ogg], [MIDI][viola-mid], [MusicXML (MXL)][viola-mxl]
   * Cello: [PDF][violoncello-pdf],  [FLAC][violoncello-flac], [MP3][violoncello-mp3], [OGG][violoncello-ogg], [MIDI][violoncello-mid], [MusicXML (MXL)][violoncello-mxl]
 
