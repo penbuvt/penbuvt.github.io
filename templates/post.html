@@ -1,0 +1,9 @@
+{% extends "page.html" %}
+
+{% block content %}
+<article>
+<h1 class="heading-text">{{ page.title }}</h1>
+<div class="post-date">Published on <time>{{ page.date }}</time>.</div>
+{{ page.content | safe }}
+</article>
+{% endblock content %}
