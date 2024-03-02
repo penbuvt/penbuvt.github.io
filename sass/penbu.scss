@@ -191,3 +191,9 @@ h1.heading-text {
 .content {
   display: unset;
 }
+
+/* Remove Juice's default to make all images in paragraphs full-width. */
+p > img {
+  width: unset;
+  height: unset;
+}
