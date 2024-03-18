@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2024-W12",
+        "events": [
+          {
+            "type": "stream",
+            "title": "awafudge (programming work session)",
+            "url": "https://www.youtube.com/watch?v=9angLFm_2Dg",
+            "datetime": "2024-03-20T19:30:00-0400",
+            "id": "719gmtlbii7bnun4oatrfnriib@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Patrick's Parabox",
+            "url": "https://www.youtube.com/watch?v=o9s8cddUeuM",
+            "datetime": "2024-03-21T19:30:00-0400",
+            "id": "09465fveq9rbnb6q5t4k1482u5@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Composing \"Make It Through\"",
+            "url": "https://www.youtube.com/watch?v=Fvg12SlI4Mw",
+            "datetime": "2024-03-22T16:00:00-0400",
+            "id": "2f45ghshrsta7c6o1cn9u0db5l@google.com"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
