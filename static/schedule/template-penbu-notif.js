@@ -43,6 +43,7 @@
         {
           stream: () => this.renderEvent(event),
           premiere: () => this.renderEvent(event),
+          video: () => this.renderEvent(event),
           separator: () => document.createElement('hr'),
         }[event.type]?.() ?? ''
       ));
