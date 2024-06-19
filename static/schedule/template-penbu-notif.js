@@ -32,6 +32,12 @@
   </div>
 </div>
 `);
+      this.postTemplate = createTemplateFromString(`
+<div id="post" class="post">
+  <h3 id="title" class="title"></h3>
+  <div id="content" class="content"></div>
+</div>
+`);
     }
 
     render(mountPoint, data) {
@@ -46,6 +52,7 @@
           stream: () => this.renderEvent(event),
           premiere: () => this.renderEvent(event),
           video: () => this.renderEvent(event),
+          post: () => this.renderPost(event),
           separator: () => document.createElement('hr'),
         }[event.type]?.() ?? ''
       ));
@@ -162,6 +169,31 @@
       } else {
         return eventFragment;
       }
+    }
+
+    renderPost({
+      id,
+      title,
+      body,
+      tags = [],
+    }) {
+      const postFragment = this.postTemplate.content.cloneNode(true);
+
+      const postElement = postFragment.getElementById('post');
+      postElement.id = id;
+      postElement.classList.add(...tags);
+
+      const titleElement = postFragment.getElementById('title');
+      titleElement.id = 'title-' + id;
+      titleElement.textContent = title;
+
+      const contentElement = postFragment.getElementById('content');
+      contentElement.id = 'content-' + id;
+      const bodyParagraph = document.createElement('p');
+      bodyParagraph.textContent = body;
+      contentElement.appendChild(bodyParagraph);
+
+      return postFragment;
     }
   }
 

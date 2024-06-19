@@ -120,7 +120,8 @@
   width: 100%;
 }
 
-.event {
+.event,
+.post {
   background-color: var(--InfoWindow);
   color: var(--InfoText);
   padding: 1ex;
