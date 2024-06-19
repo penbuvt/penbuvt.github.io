@@ -136,8 +136,20 @@
   opacity: 0.8;
 }
 
+.title-header {
+  display: block;
+  margin: 0;
+}
+
 .title {
+  display: inline;
   font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  display: inline;
+  font-size: smaller;
   margin: 0;
 }
 

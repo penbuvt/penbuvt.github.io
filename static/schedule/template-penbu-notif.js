@@ -23,7 +23,9 @@
 <div id="event" class="event">
   <div id="locations" class="locations">
   </div>
-  <h3 id="title" class="title"></h3>
+  <hgroup id="title-header" class="title-header">
+    <h3 id="title" class="title"></h3>
+  </hgroup>
   <div id="content" class="content">
     <p id="local-time" class="event-start"><span class="time-label">Local:</span> </p>
     <p id="utc-time" class="event-start"><span class="time-label">UTC:</span> </p>
@@ -55,6 +57,7 @@
     renderEvent({
       id,
       title,
+      subtitle,
       url,
       otherUrls = [],
       datetime,
@@ -109,10 +112,21 @@
         locationsElement.append(videoIdElement);
       });
 
+      const titleHeaderElement = eventFragment.getElementById('title-header');
+      titleHeaderElement.id = 'title-header-' + id;
+
       const titleElement = eventFragment.getElementById('title');
       titleElement.id = 'title-' + id;
       titleElement.textContent = title;
 
+      if (subtitle) {
+        const subtitleElement = document.createElement('p');
+        subtitleElement.id = 'subtitle-' + id;
+        subtitleElement.className = 'subtitle';
+        subtitleElement.textContent = subtitle;
+
+        titleHeaderElement.appendChild(subtitleElement);
+      }
 
       const contentElement = eventFragment.getElementById('content');
       contentElement.id = 'content-' + id;
