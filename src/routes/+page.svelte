@@ -1,4 +1,5 @@
 <script>
+  import penbuLogo from '$lib/images/penbu-logo-gradient-large.png';
   import youtubeIcon from '$lib/images/social-icons/youtube.svg';
   import youtubeIconColor from '$lib/images/social-icons/youtube-color.svg';
   import twitchIcon from '$lib/images/social-icons/twitch.svg';
@@ -16,7 +17,7 @@
     <div class="hero">
       <section>
         <h1 class="main-header">
-          Penbu
+          <img class="hero-logo" src="{penbuLogo}" alt="Penbu" />
         </h1>
         <h2 class="subtitle">
           Programming, puzzle-gaming, music-making vtuber on Linux.
@@ -77,6 +78,12 @@
     box-sizing: border-box;
     padding: 0 2rem;
     gap: 2em;
+  }
+
+  .hero-logo {
+    width: auto;
+    max-height: 9rem;
+    max-width: 100%;
   }
 
   .socials {
