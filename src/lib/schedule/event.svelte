@@ -1,6 +1,9 @@
 <script lang="ts">
   import ConditionalAnchor from './conditional-anchor.svelte';
 
+  import youtubeIcon from '$lib/images/social-icons/youtube.svg';
+  import twitchIcon from '$lib/images/social-icons/twitch.svg';
+
   export let event;
 
   const {
@@ -17,18 +20,37 @@
   const date = new Date(datetime);
 
 
-  const videoId = new URL(url).searchParams.get('v');
+  const locations = [url, ...otherUrls].map((u) => {
+    const parsedUrl = new URL(u);
+
+    switch (parsedUrl.hostname) {
+      case 'www.youtube.com':
+        // Assume full YouTube URL: https://www.youtube.com/watch?v=<video-id>
+        return {
+          text: parsedUrl.searchParams.get('v'),
+          icon: youtubeIcon,
+          alt: 'YT',
+        };
+      case 'www.twitch.tv':
+        // Assume full Twitch user URL: https://www.twitch.tv/<user>
+        return {
+          text: parsedUrl.pathname.split('/')[1],
+          icon: twitchIcon,
+          alt: 'TTV',
+        };
+    }
+  });
 </script>
 
 <ConditionalAnchor href={url} class="event-anchor">
   <div {id} class="event {tags.join(" ")}">
     <div id="location-{id}" class="locations">
-      {#if url}
+      {#each locations as { text, icon, alt } (text)}
         <span class="video-id">
-          <img width="16" height="16" src="/images/social-icons/youtube.svg" alt="YT: " />
-          {videoId}
+          <img width="16" height="16" src="{icon}" alt="{alt}: " />
+          {text}
         </span>
-      {/if}
+      {/each}
     </div>
     <h3 id="title-{id}" class="title">{title}</h3>
     <div id="content-{id}" class="content">
