@@ -43,8 +43,8 @@
     color: inherit;
     text-decoration: none;
 
-    :hover,
-    :focus {
+    &:hover,
+    &:focus {
       color: var(--HotTrackingColor);
       text-decoration: underline;
     }
