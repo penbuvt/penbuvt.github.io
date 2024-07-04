@@ -15,13 +15,15 @@
 <div>
   <main>
     <div class="hero">
-      <section>
-        <h1 class="main-header">
-          <img class="hero-logo" src="{penbuLogo}" alt="Penbu" />
-        </h1>
-        <h2 class="subtitle">
-          Programming, puzzle-gaming, music-making vtuber on Linux.
-        </h2>
+      <section class="hero-left">
+        <hgroup>
+          <h1 class="main-header">
+            <img class="hero-logo" src="{penbuLogo}" alt="Penbu" />
+          </h1>
+          <p class="subtitle">
+            Programming, puzzle-gaming, music-making vtuber on Linux.
+          </p>
+        </hgroup>
         <div class="socials">
           <a class="social-icon" href="https://www.youtube.com/@PenbuVT" style="--color-src: url({youtubeIconColor});" title="YouTube">
             <img width="64" height="64" src="{youtubeIcon}" alt="YouTube" />
@@ -78,6 +80,15 @@
     box-sizing: border-box;
     padding: 0 2rem;
     gap: 2em;
+  }
+
+  hgroup .subtitle {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .hero-left {
+    text-align: center;
   }
 
   .hero-logo {
