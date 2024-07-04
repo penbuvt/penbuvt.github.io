@@ -9,6 +9,7 @@
   const {
     id,
     title,
+    subtitle,
     url,
     otherUrls = [],
     datetime,
@@ -52,7 +53,12 @@
         </span>
       {/each}
     </div>
-    <h3 id="title-{id}" class="title">{title}</h3>
+    <hgroup id="title-header-{id}" class="title-header">
+      <h3 id="title-{id}" class="title">{title}</h3>
+      {#if subtitle}
+        <p id="subtitle-{id}" class="subtitle">{subtitle}</p>
+      {/if}
+    </hgroup>
     <div id="content-{id}" class="content">
       <p class="event-start"><span class="time-label">Local:</span> <time dateTime={date.toISOString()}>{date.toString().replace('GMT', 'UTC')}</time></p>
       <p class="event-start"><span class="time-label">UTC:</span> <time dateTime={date.toISOString()}>{date.toUTCString().replace('GMT', 'UTC')}</time></p>
@@ -106,7 +112,20 @@
     }
   }
 
+  .title-header {
+    display: block;
+    margin: 0;
+  }
+
   .title {
+    display: inline;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .subtitle {
+    display: inline;
+    font-size: smaller;
     font-weight: bold;
     margin: 0;
   }
