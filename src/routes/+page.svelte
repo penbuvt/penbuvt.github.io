@@ -1,4 +1,6 @@
 <script>
+  import NavHeader from '$lib/NavHeader.svelte';
+
   import penbuLogo from '$lib/images/penbu-logo-gradient-large.png';
   import youtubeIcon from '$lib/images/social-icons/youtube.svg';
   import youtubeIconColor from '$lib/images/social-icons/youtube-color.svg';
@@ -13,40 +15,43 @@
 </script>
 
 <div>
-  <main>
-    <div class="hero">
-      <section class="hero-left">
-        <hgroup>
-          <h1 class="main-header">
-            <img class="hero-logo" src="{penbuLogo}" alt="Penbu" />
-          </h1>
-          <p class="subtitle">
-            Programming, puzzle-gaming, music-making vtuber on Linux.
-          </p>
-        </hgroup>
-        <div class="socials">
-          <a class="social-icon" href="https://www.youtube.com/@PenbuVT" style="--color-src: url({youtubeIconColor});" title="YouTube">
-            <img width="64" height="64" src="{youtubeIcon}" alt="YouTube" />
-          </a>
-          <a class="social-icon" href="https://twitch.tv/penbuvt" style="--color-src: url({twitchIconColor});" title="Twitch">
-            <img width="64" height="64" src="{twitchIcon}" alt="Twitch" />
-          </a>
-          <a class="social-icon" href="https://discord.gg/X5XZDfBSPG" style="--color-src: url({discordIconColor});" title="Discord">
-            <img width="64" height="64" src="{discordIcon}" alt="Discord" />
-          </a>
-          <a class="social-icon" href="https://twitter.com/penbuvt" style="--color-src: url({xIconColor});" title="X (Twitter)">
-            <img width="64" height="64" src="{xIcon}" alt="X (Twitter)" />
-          </a>
-          <a class="social-icon" href="https://github.com/penbuvt" style="--color-src: url({githubIconColor});" title="GitHub">
-            <img width="64" height="64" src="{githubIcon}" alt="GitHub" />
-          </a>
-        </div>
-      </section>
-      <section>
-        <iframe class="featured-video" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=PXGk0Hhs4F723Dn2&amp;list=UUPV8mWVjn4ZXjlb3DVnL-bysQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </section>
-    </div>
-  </main>
+  <div class="hero-container">
+    <NavHeader />
+    <main>
+      <div class="hero">
+        <section class="hero-left">
+          <hgroup>
+            <h1 class="main-header">
+              <img class="hero-logo" src="{penbuLogo}" alt="Penbu" />
+            </h1>
+            <p class="subtitle">
+              Programming, puzzle-gaming, music-making vtuber on Linux.
+            </p>
+          </hgroup>
+          <div class="socials">
+            <a class="social-icon" href="https://www.youtube.com/@PenbuVT" style="--color-src: url({youtubeIconColor});" title="YouTube">
+              <img width="64" height="64" src="{youtubeIcon}" alt="YouTube" />
+            </a>
+            <a class="social-icon" href="https://twitch.tv/penbuvt" style="--color-src: url({twitchIconColor});" title="Twitch">
+              <img width="64" height="64" src="{twitchIcon}" alt="Twitch" />
+            </a>
+            <a class="social-icon" href="https://discord.gg/X5XZDfBSPG" style="--color-src: url({discordIconColor});" title="Discord">
+              <img width="64" height="64" src="{discordIcon}" alt="Discord" />
+            </a>
+            <a class="social-icon" href="https://twitter.com/penbuvt" style="--color-src: url({xIconColor});" title="X (Twitter)">
+              <img width="64" height="64" src="{xIcon}" alt="X (Twitter)" />
+            </a>
+            <a class="social-icon" href="https://github.com/penbuvt" style="--color-src: url({githubIconColor});" title="GitHub">
+              <img width="64" height="64" src="{githubIcon}" alt="GitHub" />
+            </a>
+          </div>
+        </section>
+        <section>
+          <iframe class="featured-video" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=PXGk0Hhs4F723Dn2&amp;list=UUPV8mWVjn4ZXjlb3DVnL-bysQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+      </div>
+    </main>
+  </div>
   <footer>
     <small>
       © 2023 – 2024 PenbuVT. View the source on <a href="https://github.com/penbuvt/penbuvt.github.io">GitHub</a>.
@@ -57,8 +62,7 @@
 <style lang="scss">
   @use 'sass:math';
 
-  main {
-    display: flex;
+  .hero-container {
     height: 100vh;
 
     background-color: #729fcf;
@@ -68,6 +72,10 @@
       #729fcf,
       #8ae23480
     );
+  }
+
+  main {
+    display: flex;
   }
 
   .hero {
