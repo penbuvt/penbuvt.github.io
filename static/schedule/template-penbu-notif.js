@@ -79,43 +79,42 @@
       const locationsElement = eventFragment.getElementById('locations');
       locationsElement.id = 'locations-' + id;
 
-      if (url) {
-        const parsedUrl = new URL(url);
+      // locations
+      [url, ...otherUrls].filter(Boolean).map((u) => {
+        const parsedUrl = new URL(u);
 
-        const socialIcon = document.createElement('img');
-        socialIcon.width = 16;
-        socialIcon.height = 16;
-
-        // Assume full YouTube URL: https://www.youtube.com/watch?v=<video-id>
-        // TODO: support other services
-        socialIcon.src = '/images/social-icons/youtube.svg';
-        socialIcon.alt = 'YT:';
-
-        const videoId = parsedUrl.searchParams.get('v');
-
-        const videoIdElement = document.createElement('span');
-        videoIdElement.classList.add('video-id');
-        videoIdElement.append(socialIcon, ' ', videoId);
-        locationsElement.append(videoIdElement);
-      }
-
-      otherUrls.forEach((otherUrl) => {
-        const parsedUrl = new URL(otherUrl);
-
+        switch (parsedUrl.hostname) {
+          case 'www.youtube.com':
+            return {
+              text: parsedUrl.pathname.startsWith('/@')
+                // Assume user YouTube URL: https://www.youtube.com/@<user>
+                ? parsedUrl.pathname.split('/')[1]
+                // Assume full YouTube URL: https://www.youtube.com/watch?v=<video-id>
+                : parsedUrl.searchParams.get('v'),
+              icon: '/images/social-icons/youtube.svg',
+              alt: 'YT',
+            };
+          case 'www.twitch.tv':
+            // Assume full Twitch user URL: https://www.twitch.tv/<user>
+            return {
+              text: parsedUrl.pathname.split('/')[1],
+              icon: '/images/social-icons/twitch.svg',
+              alt: 'TTV',
+            };
+        }
+      }).forEach(({ text, icon, alt }) => {
         const socialIcon = document.createElement('img');
         socialIcon.width = 16;
         socialIcon.height = 16;
 
         // Assume full Twitch user URL: https://www.twitch.tv/<user>
         // TODO: support other services
-        socialIcon.src = '/images/social-icons/twitch.svg';
-        socialIcon.alt = 'TTV:';
-
-        const user = parsedUrl.pathname.split('/')[1];
+        socialIcon.src = icon;
+        socialIcon.alt = alt;
 
         const videoIdElement = document.createElement('span');
         videoIdElement.classList.add('video-id');
-        videoIdElement.append(socialIcon, ' ', user);
+        videoIdElement.append(socialIcon, ' ', text);
         locationsElement.append(videoIdElement);
       });
 
