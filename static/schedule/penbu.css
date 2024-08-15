@@ -137,6 +137,15 @@
   opacity: 0.8;
 }
 
+.event.past {
+  opacity: 0.5;
+}
+
+.event.livenow {
+  border-color: #ef2929;
+  box-shadow: 8px 8px 8px 0 #ef292980;
+}
+
 .title-header {
   display: block;
   margin: 0;

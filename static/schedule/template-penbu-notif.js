@@ -38,6 +38,7 @@
   <div id="content" class="content"></div>
 </div>
 `);
+      this.defaultDuration = 2.5 * 60 * 60 * 1000; // 2.5 hours
     }
 
     render(mountPoint, data) {
@@ -68,6 +69,7 @@
       url,
       otherUrls = [],
       datetime,
+      duration = this.defaultDuration,
       tags = [],
     }) {
       const eventFragment = this.eventTemplate.content.cloneNode(true);
@@ -158,6 +160,16 @@
       utcTimeContainer.append(utcTimeElement);
 
       contentElement.append(localTimeContainer, utcTimeContainer);
+
+      const now = Date.now();
+      const startTimestamp = date.getTime();
+      if (now < startTimestamp) {
+        eventElement.classList.add('upcoming');
+      } else if (now < startTimestamp + duration) {
+        eventElement.classList.add('livenow');
+      } else {
+        eventElement.classList.add('past');
+      }
 
       if (url) {
         const link = document.createElement('a');
