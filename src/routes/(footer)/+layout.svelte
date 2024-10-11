@@ -10,6 +10,8 @@
 <style lang="scss">
   .content-container {
     min-height: 100vh;
+
+    background-color: var(--secondary-color);
   }
 
   footer {
