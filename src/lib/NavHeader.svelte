@@ -5,7 +5,7 @@
   export let hideLogo = false;
 
   const routes = [
-    { text: 'Schedule', href: '/schedule' },
+    { text: 'Schedule', href: resolveRoute('/schedule') },
   ];
 </script>
 
