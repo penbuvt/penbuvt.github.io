@@ -1,0 +1,17 @@
+{% import "_macros.html" as macros %}
+{% extends "index.html" %}
+
+{% block title %}404 Not Found | {{ super() }} {% endblock title %}
+
+{% block header %}
+{% block navmenu %}
+<header>
+    {{ macros::render_header() }}
+</header>
+{% endblock navmenu %}
+{% endblock header %}
+
+{% block content %}
+<h1 class="heading-text">404 Not Found</h1>
+<p>The page you were looking for isn't here.</p>
+{% endblock content %}
