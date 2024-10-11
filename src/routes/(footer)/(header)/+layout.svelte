@@ -3,4 +3,12 @@
 </script>
 
 <NavHeader />
-<slot />
+<div class="content">
+  <slot />
+</div>
+
+<style lang="scss">
+  .content {
+    padding: 1em 2em;
+  }
+</style>
