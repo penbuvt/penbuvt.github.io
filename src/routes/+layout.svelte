@@ -1,6 +1,8 @@
 <slot />
 
 <style lang="scss">
+  @use 'sass:math';
+
   // Global border-box
   :global(html) {
     box-sizing: border-box;
@@ -36,5 +38,13 @@
     --header-font-family: "DejaVu Sans", sans-serif;
     /* Font used for text */
     --text-font-family: "DejaVu Sans", sans-serif;
+
+    --brand-gradient: linear-gradient(
+      #{math.atan(math.div(1080, 1920)) + 90deg,
+        #729fcf,
+        #729fcf,
+        #8ae23480
+      }
+    );
   }
 </style>

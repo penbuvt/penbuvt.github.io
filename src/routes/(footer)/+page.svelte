@@ -53,18 +53,11 @@
 </div>
 
 <style lang="scss">
-  @use 'sass:math';
-
   .hero-container {
     height: 100vh;
 
     background-color: #729fcf;
-    background-image: linear-gradient(
-      math.atan(math.div(1080, 1920)) + 90deg,
-      #729fcf,
-      #729fcf,
-      #8ae23480
-    );
+    background-image: var(--brand-gradient);
   }
 
   main {
