@@ -1,10 +1,21 @@
 <script>
+  import { resolveRoute } from '$app/paths';
+  import penbuLogo from '$lib/images/penbu-logo-gradient-large.png';
+
+  export let hideLogo = false;
+
   const routes = [
     { text: 'Schedule', href: '/schedule' },
   ];
 </script>
 
 <header class="nav-header">
+  {#if !hideLogo}
+    <a href="{resolveRoute('/')}">
+      <img class="logo-img" src="{penbuLogo}" alt="Penbu" />
+    </a>
+  {/if}
+
   <nav>
     <menu>
     {#each routes as { text, href } }
@@ -18,6 +29,20 @@
   .nav-header {
     padding: 1em 2em;
     background: var(--nav-header-background, #729fcf var(--brand-gradient));
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: unset;
+    height: 2em;
+    margin: 0;
+  }
+
+  nav {
+    width: 100%;
   }
 
   menu {

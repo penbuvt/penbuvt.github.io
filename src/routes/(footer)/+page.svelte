@@ -15,7 +15,7 @@
 </script>
 
 <div class="hero-container">
-  <NavHeader --nav-header-background="transparent" />
+  <NavHeader hideLogo --nav-header-background="transparent" />
   <main>
     <div class="hero">
       <section class="hero-left">
