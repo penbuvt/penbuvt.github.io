@@ -17,6 +17,7 @@
 <style lang="scss">
   .nav-header {
     padding: 1em 2em;
+    background: var(--nav-header-background, #729fcf var(--brand-gradient));
   }
 
   menu {
