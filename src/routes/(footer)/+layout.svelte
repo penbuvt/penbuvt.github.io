@@ -1,4 +1,4 @@
-<div>
+<div class="content-container">
   <slot />
   <footer>
     <small>
@@ -8,7 +8,14 @@
 </div>
 
 <style lang="scss">
+  .content-container {
+    min-height: 100vh;
+  }
+
   footer {
+    position: sticky;
+    top: 100vh;
+
     background-color: #202020;
     color: white;
     height: 3em;
