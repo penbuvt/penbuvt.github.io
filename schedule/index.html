@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2024-W50",
+        "events": [
+          {
+            "type": "stream",
+            "title": "Work Session",
+            "subtitle": "website + open VC",
+            "url": "https://www.youtube.com/watch?v=Z4gMS5z9c88",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2024-12-11T18:45:00-05:00",
+            "id": "4tlr4lb090jgt7mc2se24j1mrp@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "NES Tetris",
+            "subtitle": "on Nintendo Switch",
+            "url": "https://www.youtube.com/watch?v=U5W206gLx38",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2024-12-12T19:30:00-05:00",
+            "id": "077mbpduic3na6a11hpgdg60ou@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Composing \"All You've Done\"",
+            "subtitle": "part 3",
+            "url": "https://www.youtube.com/watch?v=eLpuWorgUBE",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2024-12-13T19:30:00-05:00",
+            "id": "76hpat2j4lqq25ju5s92mm3nj8@google.com"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
