@@ -4,7 +4,8 @@
 
   export let hideLogo = false;
 
-  const routes = [
+  const routes: Link[] = [
+    { text: 'Projects', href: resolveRoute('/projects') },
     { text: 'Schedule', href: resolveRoute('/schedule') },
   ];
 </script>
