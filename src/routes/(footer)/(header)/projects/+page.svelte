@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
   import { resolveRoute } from '$app/paths';
   import type { Link } from '$lib/link.ts';
 
