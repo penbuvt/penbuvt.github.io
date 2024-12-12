@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
   import { resolveRoute } from '$app/paths';
   import penbuLogo from '$lib/images/penbu-logo-gradient-large.png';
+  import type { Link } from '$lib/link.ts';
 
   export let hideLogo = false;
 
