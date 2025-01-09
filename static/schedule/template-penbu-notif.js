@@ -115,8 +115,6 @@
         socialIcon.width = 16;
         socialIcon.height = 16;
 
-        // Assume full Twitch user URL: https://www.twitch.tv/<user>
-        // TODO: support other services
         socialIcon.src = icon;
         socialIcon.alt = alt;
 
