@@ -103,6 +103,12 @@
               icon: '/images/social-icons/twitch.svg',
               alt: 'TTV',
             };
+          case 'discord.gg':
+            return {
+              text: parsedUrl.pathname.split('/')[1],
+              icon: '/images/social-icons/discord.svg',
+              alt: 'Discord',
+            };
         }
       }).forEach(({ text, icon, alt }) => {
         const socialIcon = document.createElement('img');
