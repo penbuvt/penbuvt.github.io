@@ -2,7 +2,7 @@
   <slot />
   <footer>
     <small>
-      © 2023 – 2024 PenbuVT. View the source on <a href="https://github.com/penbuvt/penbuvt.github.io">GitHub</a>.
+      © 2023 – 2025 PenbuVT. View the source on <a href="https://github.com/penbuvt/penbuvt.github.io">GitHub</a>.
     </small>
   </footer>
 </div>
