@@ -1,4 +1,8 @@
-<h1>To You (Original composition)</h1>
+<script lang="ts">
+  export let data = {};
+</script>
+
+<h1>{data.title}</h1>
 <p>Released: February 7, 2024</p>
 
 <p>
@@ -11,14 +15,15 @@
 <p>Original composition for piano quintet (piano + string quartet).
   This is my first original composition as a vtuber. It was inspired by a private piano improv session and developed <a href="https://www.youtube.com/playlist?list=PLNMaWutZ8vfMNFjYZE1dvsyLyUcnfKxWW">live on stream</a>.</p>
 <p>The score was created with <a href="https://musescore.org/">MuseScore 3</a> and rendered with the <a href="https://musescore.org/en/handbook/3/soundfonts-and-sfz-files#All_sounds">MuseScore General SoundFont</a>.</p>
-<h2 id="links">Links</h2>
+
+<h2 id={data.headings.links.id}>{data.headings.links.text}</h2>
 <ul>
   <li><a href="https://www.youtube.com/watch?v=G9NMT7NDUVE">Music video</a></li>
   <li><a href="https://musescore.com/user/73151548/scores/14285818">MuseScore.com post</a></li>
   <li><a href="https://www.youtube.com/playlist?list=PLNMaWutZ8vfMNFjYZE1dvsyLyUcnfKxWW">Making-of playlist</a></li>
 </ul>
 
-<h2 id="downloads">Downloads</h2>
+<h2 id={data.headings.downloads.id}>{data.headings.downloads.text}</h2>
 
 <ul>
   <li>Source:
