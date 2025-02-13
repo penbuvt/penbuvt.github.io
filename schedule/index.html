@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2025-W07",
+        "events": [
+          {
+            "type": "stream",
+            "title": "Patrick's Parabox",
+            "subtitle": "from world 13 (Player)",
+            "url": "https://www.youtube.com/watch?v=rNTpqwHgN_E",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2025-02-13T19:30:00-05:00",
+            "id": "534lqkipm878kmkqk3nfq8soeg@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Tetris 99",
+            "subtitle": "45th MAXIMUS CUP",
+            "url": "https://www.youtube.com/watch?v=Yk38friBInk",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2025-02-14T19:30:00-05:00",
+            "id": "0flmu46ptussigkblr13id0b1h@google.com"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
