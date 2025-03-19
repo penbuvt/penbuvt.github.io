@@ -183,6 +183,7 @@
 
       const link = eventFragment.getElementById('event-link');
       if (url) {
+        link.id = 'event-link-' + id;
         link.href = url;
       } else {
         const eventBody = link.childNodes;
