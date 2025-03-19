@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2025-W12",
+        "events": [
+          {
+            "type": "stream",
+            "title": "Learning Pascal",
+            "subtitle": "to make a pressure calculator",
+            "url": "https://www.youtube.com/watch?v=3e4ESEZuZdM",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2025-03-20T19:30:00-04:00",
+            "id": "2448hs8kkci0mlb6dnmq2rt4np@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Composing \"One Step Back\"",
+            "subtitle": "part 3",
+            "url": "https://www.youtube.com/watch?v=MEPbE0UD1S0",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2025-03-21T19:30:00-04:00",
+            "id": "2vq17fi0p495sbm34ij91sg59l@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Go",
+            "subtitle": "the board game; collab with Hessel",
+            "url": "https://www.youtube.com/watch?v=FM33wbxryPY",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt",
+              "https://www.twitch.tv/drHessel"
+            ],
+            "datetime": "2025-03-22T15:00:00-04:00",
+            "id": "5psr0tk0uuip4m0dat8ospv1ka@google.com"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
