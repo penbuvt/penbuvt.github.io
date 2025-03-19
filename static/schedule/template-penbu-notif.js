@@ -23,13 +23,15 @@
 <div id="event" class="event">
   <div id="locations" class="locations">
   </div>
-  <hgroup id="title-header" class="title-header">
-    <h3 id="title" class="title"></h3>
-  </hgroup>
-  <div id="content" class="content">
-    <p id="local-time" class="event-start"><span class="time-label">Local:</span> </p>
-    <p id="utc-time" class="event-start"><span class="time-label">UTC:</span> </p>
-  </div>
+  <a id="event-link">
+    <hgroup id="title-header" class="title-header">
+      <h3 id="title" class="title"></h3>
+    </hgroup>
+    <div id="content" class="content">
+      <p id="local-time" class="event-start"><span class="time-label">Local:</span> </p>
+      <p id="utc-time" class="event-start"><span class="time-label">UTC:</span> </p>
+    </div>
+  </a>
 </div>
 `);
       this.postTemplate = createTemplateFromString(`
@@ -88,6 +90,7 @@
         switch (parsedUrl.hostname) {
           case 'www.youtube.com':
             return {
+              href: u,
               text: parsedUrl.pathname.startsWith('/@')
                 // Assume user YouTube URL: https://www.youtube.com/@<user>
                 ? parsedUrl.pathname.split('/')[1]
@@ -99,18 +102,20 @@
           case 'www.twitch.tv':
             // Assume full Twitch user URL: https://www.twitch.tv/<user>
             return {
+              href: u,
               text: parsedUrl.pathname.split('/')[1],
               icon: '/images/social-icons/twitch.svg',
               alt: 'TTV',
             };
           case 'discord.gg':
             return {
+              href: u,
               text: parsedUrl.pathname.split('/')[1],
               icon: '/images/social-icons/discord.svg',
               alt: 'Discord',
             };
         }
-      }).forEach(({ text, icon, alt }) => {
+      }).forEach(({ href, text, icon, alt }) => {
         const socialIcon = document.createElement('img');
         socialIcon.width = 16;
         socialIcon.height = 16;
@@ -118,8 +123,9 @@
         socialIcon.src = icon;
         socialIcon.alt = alt;
 
-        const videoIdElement = document.createElement('span');
+        const videoIdElement = document.createElement('a');
         videoIdElement.classList.add('video-id');
+        videoIdElement.href = href;
         videoIdElement.append(socialIcon, ' ', text);
         locationsElement.append(videoIdElement);
       });
@@ -175,15 +181,17 @@
         eventElement.classList.add('past');
       }
 
+      const link = eventFragment.getElementById('event-link');
       if (url) {
-        const link = document.createElement('a');
         link.href = url;
-        link.append(eventFragment);
-
-        return link;
       } else {
-        return eventFragment;
+        const eventBody = link.childNodes;
+        const fragment = document.createDocumentFragment();
+        fragment.replaceChildren(...eventBody);
+        link.parentNode.replaceChild(fragment, link);
       }
+
+      return eventFragment;
     }
 
     renderPost({
