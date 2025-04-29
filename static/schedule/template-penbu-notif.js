@@ -55,6 +55,7 @@
           stream: () => this.renderEvent(event),
           premiere: () => this.renderEvent(event),
           video: () => this.renderEvent(event),
+          event: () => this.renderEvent(event),
           post: () => this.renderPost(event),
           separator: () => document.createElement('hr'),
         }[event.type]?.() ?? ''
