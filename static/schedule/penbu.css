@@ -135,6 +135,7 @@
 .event.preview,
 .event.tentative {
   border-style: dashed;
+  border-color: var(--ButtonShadow);
   opacity: 0.8;
 }
 
