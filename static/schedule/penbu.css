@@ -132,7 +132,8 @@
   overflow: hidden;
 }
 
-.event.preview {
+.event.preview,
+.event.tentative {
   border-style: dashed;
   opacity: 0.8;
 }
