@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <meta property="og:title" name="twitter:title" content="Penbu's Schedule" />
+    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.penbuvt.ca/schedule/" />
+    <meta property="og:image" name="twitter:image" content="https://files.penbuvt.ca/schedules/2025/schedule.2025-w32.png" />
+    <meta property="og:description" name="description" content="Schedule for 2025-W32" />
+    <meta name="twitter:description" content="Schedule for 2025-W32" />
+    <meta property="og:site_name" content="Penbu" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PenbuVT">
+
+    <meta name="theme-color" content="#3465a4" />
+
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2025-W32",
+        "events": [
+          {
+            "type": "stream",
+            "title": "TETR.IO Stacking Exercise",
+            "subtitle": "collab with Atlas Chainsteel",
+            "url": "https://www.youtube.com/watch?v=NuIDqWRrKAg",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt",
+              "https://www.twitch.tv/atlas_chainsteel"
+            ],
+            "datetime": "2025-08-07T17:30:00-04:00",
+            "id": "5vlp6tsk6gkosbvt0mldr3p8cd@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Composing \"2025-08-08\"",
+            "subtitle": "part 1, title TBD",
+            "url": "https://www.youtube.com/watch?v=OBbuJjtwRwI",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2025-08-08T19:30:00-04:00",
+            "id": "551hee9cgjohs2cfmeadfo7orf@google.com"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
