@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <meta property="og:title" name="twitter:title" content="Penbu's Schedule" />
+    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.penbuvt.ca/schedule/" />
+    <meta property="og:image" name="twitter:image" content="https://files.penbuvt.ca/schedules/2025/schedule.2025-w42.png" />
+    <meta property="og:description" name="description" content="Schedule for 2025-W42" />
+    <meta name="twitter:description" content="Schedule for 2025-W42" />
+    <meta property="og:site_name" content="Penbu" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PenbuVT">
+
+    <meta name="theme-color" content="#3465a4" />
+
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2025-W42",
+        "events": [
+          {
+            "type": "stream",
+            "title": "2nd Anniversary",
+            "subtitle": "Q&A + call-ins",
+            "url": "https://www.youtube.com/watch?v=Al8oCXn-ICI",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2025-10-16T19:30:00-04:00",
+            "id": "41rkc1odrsclv95pf2636mt4tf@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "Otamatone Karaoke",
+            "subtitle": "2nd anniversary edition",
+            "url": "https://www.youtube.com/watch?v=85VqZgsq75M",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2025-10-17T19:30:00-04:00",
+            "id": "2b417341kf8mpeune13f8hb43f@google.com"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
