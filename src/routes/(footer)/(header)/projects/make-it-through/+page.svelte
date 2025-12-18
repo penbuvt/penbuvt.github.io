@@ -1,4 +1,8 @@
-<h1 class="heading-text">Make It Through (Original composition)</h1>
+<script lang="ts">
+  export let data = {};
+</script>
+
+<h1 class="heading-text">{data.title}</h1>
 <p>Released: May 17, 2024</p>
 
 <p>
@@ -12,7 +16,7 @@
   It was inspired by a private <a href="https://www.youtube.com/watch?v=mWWiI_5LjxY">piano improv session</a> and developed <a href="https://www.youtube.com/playlist?list=PLNMaWutZ8vfP3iYzWvK737pYHks57zGCz">live on stream</a>.</p>
 <p>The score was created with <a href="https://musescore.org/">MuseScore 3</a> and rendered with the <a href="https://musescore.org/en/handbook/3/soundfonts-and-sfz-files#All_sounds">MuseScore General SoundFont</a>.</p>
 
-<h2 id="links">Links</h2>
+<h2 id="{data.headings.links.id}">{data.headings.links.text}</h2>
 
 <ul>
   <li><a href="https://www.youtube.com/watch?v=pcKH6YUph_M">Music video</a></li>
@@ -21,7 +25,7 @@
   <li><a href="https://www.youtube.com/playlist?list=PLNMaWutZ8vfP3iYzWvK737pYHks57zGCz">Making-of playlist</a></li>
 </ul>
 
-<h2 id="downloads">Downloads</h2>
+<h2 id={data.headings.downloads.id}>{data.headings.downloads.text}</h2>
 
 <ul>
   <li>Source:

@@ -1,3 +1,15 @@
+<script lang="ts">
+  import { page } from '$app/stores';
+</script>
+
+<svelte:head>
+  {#if $page.data.title}
+    <title>{$page.data.title} | Penbu VT</title>
+  {:else}
+    <title>Penbu VT</title>
+  {/if}
+</svelte:head>
+
 <slot />
 
 <style lang="scss">
