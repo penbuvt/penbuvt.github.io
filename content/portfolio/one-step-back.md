@@ -63,7 +63,7 @@ The visualizations for each individual instrument used the following additional 
 ## Links
 
 * [Music video](https://www.youtube.com/watch?v=pp6bK7sd7dQ)
-* [MuseScore.com post](https://musescore.com/user/73151548/scores/24411562)
+* [MuseScore.com post](https://musescore.com/user/73151548/scores/30543353)
 * [Original piano improv session][piano-improv]
 * [Making-of playlist][]
 
