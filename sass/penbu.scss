@@ -198,6 +198,16 @@ p > img {
   height: unset;
 }
 
+/* Move Juice's li padding to the margin instead to take advantage of margin collapse... */
+ul > li {
+  padding: unset;
+  margin: 0.3rem 0;
+}
+/* ...but no need to add top margin to the first one */
+ul > li:first-child {
+  margin-top: 0;
+}
+
 figcaption {
   font-size: smaller;
 }
