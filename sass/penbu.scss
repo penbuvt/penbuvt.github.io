@@ -215,3 +215,8 @@ figcaption {
 .post-date {
   font-size: smaller;
 }
+
+details::details-content {
+  border-left: 0.5ex solid var(--shadow-color);
+  padding-left: 1em;
+}
