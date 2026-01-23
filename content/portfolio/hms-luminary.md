@@ -34,6 +34,7 @@ Album art by [Edengarde](https://x.com/Edengarde_Q).
 
 * [Flight video][hms-luminary]
 * [Soundtrack video](https://www.youtube.com/watch?v=q4Y8U4fLReA)
+* [Jelly's reaction](https://www.youtube.com/watch?v=HLz42gft130&t=13769) (timestamp 3:49:29)
 * [MuseScore.com post](https://musescore.com/user/73151548/scores/31126496)
 * [“Luminary”][luminary] by Jelly Hoshiumi
 
