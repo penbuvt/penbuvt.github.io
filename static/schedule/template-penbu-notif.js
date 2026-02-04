@@ -40,7 +40,10 @@
   <div id="content" class="content"></div>
 </div>
 `);
-      this.defaultDuration = 2.5 * 60 * 60 * 1000; // 2.5 hours
+      this.defaultDurations = {
+        stream: 2.5 * 60 * 60 * 1000, // 2.5 hours
+        premiere: 5 * 60 * 1000, // 5 minutes
+      };
     }
 
     render(mountPoint, data) {
@@ -67,12 +70,13 @@
 
     renderEvent({
       id,
+      type,
       title,
       subtitle,
       url,
       otherUrls = [],
       datetime,
-      duration = this.defaultDuration,
+      duration = this.defaultDurations[type] ?? 0,
       tags = [],
     }) {
       const eventFragment = this.eventTemplate.content.cloneNode(true);
