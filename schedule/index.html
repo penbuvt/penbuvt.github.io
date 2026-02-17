@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <meta property="og:title" name="twitter:title" content="Penbu's Schedule" />
+    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.penbuvt.ca/schedule/" />
+    <meta property="og:image" name="twitter:image" content="https://files.penbuvt.ca/schedules/2026/schedule.2026-w08.png" />
+    <meta property="og:description" name="description" content="Schedule for 2026-W08" />
+    <meta name="twitter:description" content="Schedule for 2026-W08" />
+    <meta property="og:site_name" content="Penbu" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PenbuVT">
+
+    <meta name="theme-color" content="#3465a4" />
+
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2026-W08",
+        "events": [
+          {
+            "type": "stream",
+            "title": "Piano Improv",
+            "subtitle": "",
+            "url": "https://www.youtube.com/watch?v=qfPLwEwSyHM",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2026-02-17T19:30:00-05:00",
+            "id": "0vpunfumfrrh138ruqkgvbnvhe@google.com"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
