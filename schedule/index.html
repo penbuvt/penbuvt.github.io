@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penbu's Schedule</title>
+    <meta property="og:title" name="twitter:title" content="Penbu's Schedule" />
+    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.penbuvt.ca/schedule/" />
+    <meta property="og:image" name="twitter:image" content="https://files.penbuvt.ca/schedules/2026/schedule.2026-w14.png" />
+    <meta property="og:description" name="description" content="Schedule for 2026-W14" />
+    <meta name="twitter:description" content="Schedule for 2026-W14" />
+    <meta property="og:site_name" content="Penbu" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PenbuVT">
+
+    <meta name="theme-color" content="#3465a4" />
+
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./penbu.css" rel="stylesheet" />
+
+    <script src="./template-penbu-notif.js"></script>
+    <script type="application/json" id="schedule-data">
+      {
+        "version": "1.0",
+        "title": "Schedule for 2026-W14",
+        "events": [
+          {
+            "type": "stream",
+            "title": "Website Work",
+            "subtitle": "programming",
+            "url": "https://www.youtube.com/watch?v=nAduV-XPp-Y",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2026-03-31T19:30:00-04:00",
+            "id": "01q0gchf53d9nd2lqjnqul3ha4@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "TETR.IO",
+            "subtitle": "April Fool's 2026",
+            "url": "https://www.youtube.com/watch?v=gm20XjsJqVU",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2026-04-01T15:00:00-04:00",
+            "id": "57v7evtr5m0a1lffb8pujf0atm@google.com"
+          },
+          {
+            "type": "stream",
+            "title": "OpenUtau",
+            "subtitle": "adding vocals to covers",
+            "url": "https://www.youtube.com/watch?v=0z_zUlvSKKo",
+            "otherUrls": [
+              "https://www.twitch.tv/penbuvt"
+            ],
+            "datetime": "2026-04-02T19:30:00-04:00",
+            "id": "5iv2j9e7vsgtkuiihncv7a1ssu@google.com"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="schedule" class="schedule">
+      <div style="margin: auto; padding: 1em; text-align: center;">
+        This schedule requires JavaScript to render. This is a limitation that will be fixed in a future version.
+      </div>
+    </div>
+
+    <script>
+      const mountPoint = document.getElementById('schedule');
+      const data = JSON.parse(document.getElementById('schedule-data').textContent);
+
+      const template = new PenbuNotifScheduleTemplate();
+      template.render(mountPoint, data);
+    </script>
+  </body>
+</html>
