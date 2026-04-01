@@ -12,7 +12,9 @@
     <TableOfContents headings={$page.data?.headings} />
   </div>
   <div class="content">
-    <slot />
+    <main>
+      <slot />
+    </main>
   </div>
 </div>
 
@@ -26,8 +28,15 @@
   }
 
   .content {
+    box-sizing: content-box;
+    max-width: 80ch;
+    margin: 0 auto;
     padding: 1em 2em;
     overflow-x: hidden;
+  }
+
+  main {
+    box-sizing: border-box;
   }
 
   .toc-container {

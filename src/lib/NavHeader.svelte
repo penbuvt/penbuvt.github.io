@@ -12,19 +12,21 @@
 </script>
 
 <header class="nav-header">
-  {#if !hideLogo}
-    <a href="{resolveRoute('/')}">
-      <img class="logo-img" src="{penbuLogo}" alt="Penbu" />
-    </a>
-  {/if}
+  <div class="inner">
+    {#if !hideLogo}
+      <a href="{resolveRoute('/')}">
+        <img class="logo-img" src="{penbuLogo}" alt="Penbu" />
+      </a>
+    {/if}
 
-  <nav>
-    <menu>
-    {#each routes as { text, href } }
-      <li><a href="{href}">{text}</a></li>
-    {/each}
-  </menu>
-  </nav>
+    <nav>
+      <menu>
+        {#each routes as { text, href } }
+          <li><a href="{href}">{text}</a></li>
+        {/each}
+      </menu>
+    </nav>
+  </div>
 </header>
 
 <style lang="scss">
@@ -32,10 +34,14 @@
     padding: 1em 2em;
     background: var(--nav-header-background, #729fcf var(--brand-gradient));
     font-family: var(--header-font-family);
+  }
 
+  .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 132ch;
+    margin: 0 auto;
   }
 
   .logo-img {
