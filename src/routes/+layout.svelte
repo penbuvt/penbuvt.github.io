@@ -37,9 +37,14 @@
     color: var(--visited-link-color);
   }
 
-  :global(a:hover),
-  :global(a:focus) {
+  :global(a:link:hover),
+  :global(a:link:focus) {
     color: var(--hover-link-color);
+  }
+
+  :global(a:visited:hover),
+  :global(a:visited:focus) {
+    color: var(--hover-visited-link-color);
   }
 
   :global(a:active) {
@@ -56,6 +61,7 @@
     --primary-link-color: #204A87;
     --visited-link-color: #5C3566;
     --hover-link-color: #3465A4;
+    --hover-visited-link-color: #75507B;
     --active-link-color: #CC0000;
     /* Secondary color: the background body color */
     --secondary-color: #EEEEEC;
