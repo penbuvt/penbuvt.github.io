@@ -1,14 +1,27 @@
 <script lang="ts">
+  import type { ComponentProps } from 'svelte';
+
   import { resolveRoute } from '$app/paths';
   import type { Link } from '$lib/link.ts';
   import { makeTitle } from '$lib/title.ts';
+  import PageCard from '$lib/PageCard.svelte';
 
   export let data = {};
   let title, headings;
 
-  const pages: Link[] = [
-    { text: 'To You (Original composition)', href: resolveRoute('/projects/to-you/') },
-    { text: 'Make It Through (Original composition)', href: resolveRoute('/projects/make-it-through/') },
+  const pages: ComponentProps<PageCard>[] = [
+    {
+      text: 'To You (Original composition)',
+      href: resolveRoute('/projects/to-you/'),
+      image: 'https://files.penbuvt.ca/music/to-you/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
+    {
+      text: 'Make It Through (Original composition)',
+      href: resolveRoute('/projects/make-it-through/'),
+      image: 'https://files.penbuvt.ca/music/make-it-through/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
   ];
 </script>
 
@@ -18,8 +31,21 @@
 
 <h2 id={data.headings.pages.id}>{data.headings.pages.text}</h2>
 
-<ul>
-  {#each pages as { text, href } (href)}
-    <li><a {href}>{text}</a></li>
+<ul class="page-list">
+  {#each pages as page (page.href)}
+    <li><PageCard {...page} /></li>
   {/each}
 </ul>
+
+<style lang="scss">
+  .page-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    list-style-type: none;
+
+    & > li {
+      width: 18em;
+    }
+  }
+</style>
