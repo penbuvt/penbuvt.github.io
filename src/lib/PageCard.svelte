@@ -48,7 +48,7 @@
       font-weight: bold;
       padding: 0.5em;
 
-      a:not(:hover):not(:focus) & {
+      a:not(:hover):not(:focus):not(:active) & {
         color: var(--primary-text-color);
       }
     }

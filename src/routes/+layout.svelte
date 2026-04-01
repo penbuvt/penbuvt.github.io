@@ -47,7 +47,8 @@
     color: var(--hover-visited-link-color);
   }
 
-  :global(a:active) {
+  :global(a:link:active),
+  :global(a:visited:active) {
     color: var(--active-link-color);
   }
 
