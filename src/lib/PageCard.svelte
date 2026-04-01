@@ -43,9 +43,14 @@
     //}
 
     .title {
+      font-family: var(--header-font-family);
       font-size: larger;
       font-weight: bold;
       padding: 0.5em;
+
+      a:not(:hover):not(:focus) & {
+        color: var(--primary-text-color);
+      }
     }
   }
 </style>
