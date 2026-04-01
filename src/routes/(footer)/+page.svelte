@@ -79,6 +79,7 @@
   hgroup .subtitle {
     font-size: 1.5em;
     font-weight: bold;
+    font-family: var(--header-font-family);
   }
 
   .hero-left {
