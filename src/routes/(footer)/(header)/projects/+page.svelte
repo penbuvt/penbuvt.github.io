@@ -29,8 +29,6 @@
 
 <p>A list of my released works.</p>
 
-<h2 id={data.headings.pages.id}>{data.headings.pages.text}</h2>
-
 <ul class="page-list">
   {#each pages as page (page.href)}
     <li><PageCard {...page} /></li>

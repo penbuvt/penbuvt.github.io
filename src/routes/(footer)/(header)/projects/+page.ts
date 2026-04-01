@@ -4,7 +4,6 @@ export const load: PageLoad = () => {
   return {
     title: 'Projects',
     headings: {
-      pages: { id: 'pages', text: 'Pages' },
     },
   };
 };
