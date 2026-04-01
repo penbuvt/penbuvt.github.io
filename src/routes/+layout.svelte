@@ -14,6 +14,8 @@
 
 <style lang="scss">
   @use 'sass:math';
+  @import '$lib/font.css';
+  @import '$lib/global.css';
 
   // Global border-box
   :global(html) {
@@ -67,7 +69,7 @@
     --shadow-color: #BABDB6;
 
     /* Font used for headers (h1 & h2) */
-    --header-font-family: "DejaVu Sans", sans-serif;
+    --header-font-family: "Tiresias Infofont", sans-serif;
     /* Font used for text */
     --text-font-family: "DejaVu Sans", sans-serif;
 

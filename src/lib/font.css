@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Tiresias Infofont";
+  font-weight: normal;
+  font-style: normal;
+  src:
+    local("Tiresias Infofont")
+    url("https://files.penbuvt.ca/fonts/tiresias/Tiresias%20Infofont.ttf");
+}
+
+@font-face {
+  font-family: "Tiresias Infofont";
+  font-weight: bold;
+  font-style: normal;
+  src:
+    local("Tiresias Infofont")
+    url("https://files.penbuvt.ca/fonts/tiresias/Tiresias%20Infofont%20Bold.ttf");
+}
+
+@font-face {
+  font-family: "Tiresias Infofont";
+  font-weight: normal;
+  font-style: italic;
+  src:
+    local("Tiresias Infofont")
+    url("https://files.penbuvt.ca/fonts/tiresias/Tiresias%20Infofont%20Italic.ttf");
+}
+
+@font-face {
+  font-family: "Tiresias Infofont";
+  font-weight: bold;
+  font-style: italic;
+  src:
+    local("Tiresias Infofont Italic")
+    url("https://files.penbuvt.ca/fonts/tiresias/Tiresias%20Infofont%20Italic.ttf");
+}
