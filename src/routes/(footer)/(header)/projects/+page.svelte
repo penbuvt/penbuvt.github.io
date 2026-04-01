@@ -38,6 +38,7 @@
 <style lang="scss">
   .page-list {
     display: flex;
+    padding: 0;
     flex-wrap: wrap;
     gap: 2em;
     list-style-type: none;
