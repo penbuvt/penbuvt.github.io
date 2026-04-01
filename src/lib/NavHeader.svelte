@@ -31,6 +31,7 @@
   .nav-header {
     padding: 1em 2em;
     background: var(--nav-header-background, #729fcf var(--brand-gradient));
+    font-family: var(--header-font-family);
 
     display: flex;
     justify-content: space-between;
