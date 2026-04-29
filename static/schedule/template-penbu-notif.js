@@ -94,6 +94,7 @@
 
         switch (parsedUrl.hostname) {
           case 'www.youtube.com':
+          case 'youtube.com':
             return {
               href: u,
               text: parsedUrl.pathname.startsWith('/@')
@@ -105,6 +106,7 @@
               alt: 'YT',
             };
           case 'www.twitch.tv':
+          case 'twitch.tv':
             // Assume full Twitch user URL: https://www.twitch.tv/<user>
             return {
               href: u,
