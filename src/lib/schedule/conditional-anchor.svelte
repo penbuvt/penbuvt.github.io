@@ -1,11 +1,11 @@
 <script lang="ts">
-  export let href;
+  let { ...props } = $props();
 </script>
 
-{#if href}
-  <a {...$$props}>
-    <slot />
+{#if props.href}
+  <a {...props}>
+    {@render props.children?.()}
   </a>
 {:else}
-  <slot />
+  {@render props.children?.()}
 {/if}

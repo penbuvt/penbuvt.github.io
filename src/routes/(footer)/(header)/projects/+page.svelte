@@ -6,7 +6,7 @@
   import { makeTitle } from '$lib/title.ts';
   import PageCard from '$lib/PageCard.svelte';
 
-  export let data = {};
+  let { data = {} } = $props();
   let title, headings;
 
   const pages: ComponentProps<PageCard>[] = [

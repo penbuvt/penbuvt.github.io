@@ -1,16 +1,21 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
 </script>
 
 <svelte:head>
-  {#if $page.data.title}
-    <title>{$page.data.title} | Penbu VT</title>
+  {#if page.data.title}
+    <title>{page.data.title} | Penbu VT</title>
   {:else}
     <title>Penbu VT</title>
   {/if}
 </svelte:head>
 
-<slot />
+{@render children?.()}
 
 <style lang="scss">
   @use 'sass:math';

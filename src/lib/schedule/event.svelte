@@ -4,7 +4,7 @@
   import youtubeIcon from '$lib/images/social-icons/youtube.svg';
   import twitchIcon from '$lib/images/social-icons/twitch.svg';
 
-  export let event;
+  let { event } = $props();
 
   const {
     id,

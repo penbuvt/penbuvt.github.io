@@ -1,5 +1,13 @@
+<script lang="ts">
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
+</script>
+
 <div class="content-container">
-  <slot />
+  {@render children?.()}
   <footer>
     <small>
       © 2023–2025 PenbuVT. View the source on <a href="https://github.com/penbuvt/penbuvt.github.io">GitHub</a>.

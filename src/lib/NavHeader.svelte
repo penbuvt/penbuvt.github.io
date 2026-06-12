@@ -3,7 +3,11 @@
   import penbuLogo from '$lib/images/penbu-logo-gradient-large.png';
   import type { Link } from '$lib/link.ts';
 
-  export let hideLogo = false;
+  interface Props {
+    hideLogo?: boolean;
+  }
+
+  let { hideLogo = false }: Props = $props();
 
   const routes: Link[] = [
     { text: 'Projects', href: resolveRoute('/projects') },

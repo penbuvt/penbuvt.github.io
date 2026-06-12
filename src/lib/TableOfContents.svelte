@@ -1,7 +1,7 @@
 <script lang="ts">
-  export let headings = {};
+  let { headings = {} } = $props();
 
-  $: orderedHeadings = Object.values(headings ?? {});
+  let orderedHeadings = $derived(Object.values(headings ?? {}));
 </script>
 
 {#if orderedHeadings.length}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let data = {};
+  let { data = {} } = $props();
 </script>
 
 <h1 class="heading-text">{data.title}</h1>

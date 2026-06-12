@@ -2,18 +2,23 @@
   import NavHeader from '$lib/NavHeader.svelte';
   import TableOfContents from '$lib/TableOfContents.svelte';
 
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
 </script>
 
 <NavHeader />
 
 <div class="content-container">
   <div class="toc-container">
-    <TableOfContents headings={$page.data?.headings} />
+    <TableOfContents headings={page.data?.headings} />
   </div>
   <div class="content">
     <main>
-      <slot />
+      {@render children?.()}
     </main>
   </div>
 </div>
