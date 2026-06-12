@@ -1,7 +1,6 @@
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
-import toml from 'toml';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,16 +10,6 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.svx', '.md'],
-			frontmatter: {
-				marker: '+',
-				parse(frontmatter, messages) {
-					try {
-						return toml.parse(frontmatter);
-					} catch (e) {
-						messages.push(`Parsing error on line ${e.line}, column ${e.column}: ${e.message}`);
-					}
-				}
-			}
 		})
 	],
 	kit: {
