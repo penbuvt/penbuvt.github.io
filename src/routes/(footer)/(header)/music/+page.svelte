@@ -22,6 +22,12 @@
       image: 'https://files.penbuvt.ca/music/make-it-through/album-art.300px.png',
       imageAlt: 'Cover art',
     },
+    {
+      text: 'Looking Back (Original composition)',
+      href: resolveRoute('/music/looking-back/'),
+      image: 'https://files.penbuvt.ca/music/looking-back/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
   ];
 </script>
 
