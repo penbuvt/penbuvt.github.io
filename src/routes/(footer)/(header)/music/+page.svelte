@@ -12,13 +12,13 @@
   const pages: ComponentProps<PageCard>[] = [
     {
       text: 'To You (Original composition)',
-      href: resolveRoute('/projects/to-you/'),
+      href: resolveRoute('/music/to-you/'),
       image: 'https://files.penbuvt.ca/music/to-you/album-art.300px.png',
       imageAlt: 'Cover art',
     },
     {
       text: 'Make It Through (Original composition)',
-      href: resolveRoute('/projects/make-it-through/'),
+      href: resolveRoute('/music/make-it-through/'),
       image: 'https://files.penbuvt.ca/music/make-it-through/album-art.300px.png',
       imageAlt: 'Cover art',
     },

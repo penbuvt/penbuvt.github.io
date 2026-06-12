@@ -10,7 +10,7 @@
   let { hideLogo = false }: Props = $props();
 
   const routes: Link[] = [
-    { text: 'Projects', href: resolveRoute('/projects') },
+    { text: 'Music', href: resolveRoute('/music') },
     { text: 'Schedule', href: resolveRoute('/schedule') },
   ];
 </script>
