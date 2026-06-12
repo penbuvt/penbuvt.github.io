@@ -19,6 +19,7 @@
 		"@typescript-eslint/parser": "^6.21.0",
 		"eslint": "^8.57.1",
 		"eslint-plugin-svelte": "^2.46.1",
+		"mdsvex": "^0.12.7",
 		"sass": "^1.101.0",
 		"svelte": "^5.56.3",
 		"svelte-check": "^4.6.0",
