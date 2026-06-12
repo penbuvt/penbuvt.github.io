@@ -1,10 +1,11 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
   import NavHeader from '$lib/NavHeader.svelte';
   import TableOfContents from '$lib/TableOfContents.svelte';
 
   import { page } from '$app/state';
   interface Props {
-    children?: import('svelte').Snippet;
+    children?: Snippet;
   }
 
   let { children }: Props = $props();
