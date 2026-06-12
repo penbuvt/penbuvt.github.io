@@ -1,4 +1,5 @@
 import { mdsvex } from 'mdsvex';
+import toml from 'toml';
 import adapter from '@sveltejs/adapter-auto';
 import sveltePreprocess from 'svelte-preprocess';
 
@@ -6,7 +7,22 @@ import sveltePreprocess from 'svelte-preprocess';
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: [sveltePreprocess(), mdsvex({ extensions: ['.svx', '.md'] })],
+	preprocess: [
+		sveltePreprocess(),
+		mdsvex({
+			extensions: ['.svx', '.md'],
+			frontmatter: {
+				marker: '+',
+				parse(frontmatter, messages) {
+					try {
+						return toml.parse(frontmatter);
+					} catch (e) {
+						messages.push(`Parsing error on line ${e.line}, column ${e.column}: ${e.message}`);
+					}
+				}
+			}
+		})
+	],
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
 		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
