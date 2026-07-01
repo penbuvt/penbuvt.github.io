@@ -1,0 +1,212 @@
+.schedule {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #729fcf;
+  background-image: linear-gradient(
+    119.358deg, /* atan(1080 / 1920) + 90deg */
+    #729fcf,
+    #729fcf,
+    #8ae23480
+  );
+
+  font-size: 1.5em;
+  font-family: "DejaVu Sans", sans-serif;
+
+  --ButtonAlternateFace: #babdb6;
+  --ButtonDkShadow: #000000;
+  --ButtonFace: #d3d7cf;
+  --ButtonHilight: #eaece8;
+  --ButtonLight: #ffffff;
+  --ButtonShadow: #888a85;
+  --ButtonText: #000000;
+  --ActiveBorder: #d3d7cf;
+  --AppWorkspace: #888a85;
+  --Background: #729fcf;
+  --InactiveBorder: #d3d7cf;
+  --Scrollbar: #eaece8;
+  --Window: #ffffff;
+  --WindowFrame: #000000;
+  --WindowText: #000000;
+  --ActiveTitle: #204a87;
+  --GradientActiveTitle: #498e4e;
+  --GradientInactiveTitle: #3465a4;
+  --InactiveTitle: #204a87;
+  --InactiveTitleText: #d3d7cf;
+  --TitleText: #ffffff;
+  --Menu: #d3d7cf;
+  --MenuBar: #d3d7cf;
+  --MenuHilight: #204a87;
+  --MenuText: #000000;
+  --GrayText: #888a85;
+  --Hilight: #204a87;
+  --HilightText: #ffffff;
+  --HotTrackingColor: #204a87;
+  --InfoText: #000000;
+  --InfoWindow: #ffffbb;
+}
+
+.schedule a {
+  color: inherit;
+  text-decoration: none;
+}
+.schedule a:hover,
+.schedule a:focus {
+  color: var(--HotTrackingColor);
+  text-decoration: underline;
+}
+
+.schedule .locations {
+  float: right;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.schedule .video-id {
+  font-size: 0.5em;
+  font-family: "DejaVu Sans Mono", monospace;
+  white-space: nowrap;
+}
+
+.schedule .video-id img {
+  width: 1em;
+  height: auto;
+  vertical-align: middle;
+}
+
+.schedule-contents {
+  flex-grow: 1;
+
+  display: flex;
+  overflow: auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.schedule-contents > * {
+  flex: 1 1 0;
+}
+
+.schedule-info {
+  margin: auto 0;
+  text-align: center;
+  min-width: 50%;
+  padding: 1em;
+  min-width: 15em;
+}
+
+.schedule-info .logo {
+  font-size: inherit;
+}
+
+.schedule-info .logo-image {
+  max-width: 100%;
+  max-height: 6em;
+  height: auto;
+}
+
+.schedule-events {
+  display: flex;
+  padding: 0 1em;
+  min-width: 66.667%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.schedule-events > hr {
+  width: 100%;
+}
+
+.event,
+.post {
+  background-color: var(--InfoWindow);
+  color: var(--InfoText);
+  padding: 1ex;
+  border: 2px ridge var(--ButtonFace);
+  border-radius: 8px;
+  box-shadow: 8px 8px 8px 0 #55575380;
+  margin: 0 8px 8px 0;
+  overflow: hidden;
+}
+
+.event.preview,
+.event.tentative {
+  border-style: dashed;
+  border-color: var(--ButtonShadow);
+  opacity: 0.8;
+}
+
+.event.past {
+  opacity: 0.5;
+}
+
+.event.livenow {
+  border-color: #ef2929;
+  box-shadow: 8px 8px 8px 0 #ef292980;
+}
+
+.title-header {
+  display: block;
+  margin: 0;
+}
+
+.title {
+  display: inline;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  display: inline;
+  font-size: smaller;
+  font-weight: bold;
+  margin: 0;
+}
+
+.content {
+  display: table;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.content > * {
+  display: table-row;
+}
+
+.content > * > * {
+  display: table-cell;
+}
+
+.content > * > * + * {
+  padding-left: 1ex;
+}
+
+.content p {
+  margin: 0;
+}
+
+.content .event-start {
+  font-size: smaller;
+}
+
+.content .time-label {
+  text-align: right;
+}
+
+.schedule footer {
+  display: flex;
+  padding: 1ex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: smaller;
+}
+
+.schedule footer .social-icon {
+  width: 1em;
+  height: auto;
+  vertical-align: middle;
+}
