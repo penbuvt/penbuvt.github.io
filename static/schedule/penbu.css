@@ -47,6 +47,8 @@
   --HotTrackingColor: #204a87;
   --InfoText: #000000;
   --InfoWindow: #ffffbb;
+
+  --external-event-color: #bbdcff;
 }
 
 .schedule a {
@@ -146,6 +148,10 @@
 .event.livenow {
   border-color: #ef2929;
   box-shadow: 8px 8px 8px 0 #ef292980;
+}
+
+.event.external {
+  background-color: var(--external-event-color);
 }
 
 .title-header {
