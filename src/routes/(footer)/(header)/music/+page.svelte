@@ -28,6 +28,12 @@
       image: 'https://files.penbuvt.ca/music/looking-back/album-art.300px.png',
       imageAlt: 'Cover art',
     },
+    {
+      text: 'In Your Life (piano solo ver.)',
+      href: resolveRoute('/music/in-your-life-piano-solo/'),
+      image: 'https://files.penbuvt.ca/music/in-your-life/piano-solo/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
   ];
 </script>
 
