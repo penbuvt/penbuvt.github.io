@@ -11,33 +11,9 @@
 
   const pages: ComponentProps<PageCard>[] = [
     {
-      text: 'To You (Original composition)',
-      href: resolveRoute('/music/to-you/'),
-      image: 'https://files.penbuvt.ca/music/to-you/album-art.300px.png',
-      imageAlt: 'Cover art',
-    },
-    {
-      text: 'Make It Through (Original composition)',
-      href: resolveRoute('/music/make-it-through/'),
-      image: 'https://files.penbuvt.ca/music/make-it-through/album-art.300px.png',
-      imageAlt: 'Cover art',
-    },
-    {
-      text: 'Looking Back (Original composition)',
-      href: resolveRoute('/music/looking-back/'),
-      image: 'https://files.penbuvt.ca/music/looking-back/album-art.300px.png',
-      imageAlt: 'Cover art',
-    },
-    {
-      text: 'In Your Life (piano solo ver.)',
-      href: resolveRoute('/music/in-your-life-piano-solo/'),
-      image: 'https://files.penbuvt.ca/music/in-your-life/piano-solo/album-art.300px.png',
-      imageAlt: 'Cover art',
-    },
-    {
-      text: 'One Step Back, Two Steps Forward (Original composition)',
-      href: resolveRoute('/music/one-step-back/'),
-      image: 'https://files.penbuvt.ca/music/one-step-back/album-art.300px.png',
+      text: 'Mountain (Concert band arrangement)',
+      href: resolveRoute('/music/mountain/'),
+      image: 'https://files.penbuvt.ca/music/mountain/album-art.300px.png',
       imageAlt: 'Cover art',
     },
     {
@@ -47,9 +23,33 @@
       imageAlt: 'Cover art',
     },
     {
-      text: 'Mountain (Concert band arrangement)',
-      href: resolveRoute('/music/mountain/'),
-      image: 'https://files.penbuvt.ca/music/mountain/album-art.300px.png',
+      text: 'One Step Back, Two Steps Forward (Original composition)',
+      href: resolveRoute('/music/one-step-back/'),
+      image: 'https://files.penbuvt.ca/music/one-step-back/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
+    {
+      text: 'In Your Life (piano solo ver.)',
+      href: resolveRoute('/music/in-your-life-piano-solo/'),
+      image: 'https://files.penbuvt.ca/music/in-your-life/piano-solo/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
+    {
+      text: 'Looking Back (Original composition)',
+      href: resolveRoute('/music/looking-back/'),
+      image: 'https://files.penbuvt.ca/music/looking-back/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
+    {
+      text: 'Make It Through (Original composition)',
+      href: resolveRoute('/music/make-it-through/'),
+      image: 'https://files.penbuvt.ca/music/make-it-through/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
+    {
+      text: 'To You (Original composition)',
+      href: resolveRoute('/music/to-you/'),
+      image: 'https://files.penbuvt.ca/music/to-you/album-art.300px.png',
       imageAlt: 'Cover art',
     },
   ];
