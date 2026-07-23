@@ -1,12 +1,14 @@
 ---
 title: "To You (Original composition)"
 date: 2024-02-07
+headings:
+  links:
+    id: links
+    text: Links
+  downloads:
+    id: downloads
+    text: Downloads
 ---
-
-
-<script lang="ts">
-  let { data = {} } = $props();
-</script>
 
 <h1 class="heading-text">{title}</h1>
 <p>Released: February 7, 2024</p>
@@ -24,7 +26,7 @@ This is my first original composition as a vtuber. It was inspired by a private 
 
 The score was created with [MuseScore 3](https://musescore.org/) and rendered with the [MuseScore General SoundFont](https://musescore.org/en/handbook/3/soundfonts-and-sfz-files#All_sounds).
 
-<h2 id="{data.headings.links.id}">{data.headings.links.text}</h2>
+<h2 id="{headings.links.id}">{headings.links.text}</h2>
 
 * [Music video](https://www.youtube.com/watch?v=G9NMT7NDUVE)
 * [MuseScore.com post](https://musescore.com/user/73151548/scores/14285818)
@@ -32,7 +34,7 @@ The score was created with [MuseScore 3](https://musescore.org/) and rendered wi
 
 [making-of playlist]: https://www.youtube.com/playlist?list=PLNMaWutZ8vfMNFjYZE1dvsyLyUcnfKxWW
 
-<h2 id={data.headings.downloads.id}>{data.headings.downloads.text}</h2>
+<h2 id={headings.downloads.id}>{headings.downloads.text}</h2>
 
 * Source: [MuseScore (MSCZ)][score-mscz]
 * Full score: [PDF (score only)][score-pdf], [PDF (score and parts)][score-parts-pdf], [FLAC][score-flac], [MP3][score-mp3], [OGG][score-ogg], [MIDI][score-mid], [MusicXML (MXL)][score-mxl]

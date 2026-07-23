@@ -1,11 +1,14 @@
 ---
 title: "In Your Life (piano solo ver.)"
 date: 2025-06-13
+headings:
+  links:
+    id: links
+    text: Links
+  downloads:
+    id: downloads
+    text: Downloads
 ---
-
-<script lang="ts">
-  let { data = {} } = $props();
-</script>
 
 <h1 class="heading-text">{title}</h1>
 <p>Released: June 13, 2025</p>
@@ -27,12 +30,12 @@ The score was created with [MuseScore 3](https://musescore.org/) and rendered wi
 [salamander-gp]: https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html#SalamanderGrandPiano
 [cc by 3.0]: http://creativecommons.org/licenses/by/3.0/
 
-<h2 id="{data.headings.links.id}">{data.headings.links.text}</h2>
+<h2 id="{headings.links.id}">{headings.links.text}</h2>
 
 * [Music video](https://www.youtube.com/watch?v=0ay2W_3dEO0)
 * [MuseScore.com post](https://musescore.com/user/73151548/scores/25795189)
 
-<h2 id={data.headings.downloads.id}>{data.headings.downloads.text}</h2>
+<h2 id={headings.downloads.id}>{headings.downloads.text}</h2>
 
 * Performance: [FLAC][performance-flac], [MP3][performance-mp3], [MIDI][performance-mid]
 * Sheet music: [MuseScore (MSCZ)][score-mscz], [MusicXML][score-mxl], [MIDI][score-mid]

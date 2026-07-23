@@ -15,10 +15,7 @@ export const load: PageLoad = async ({ params }) => {
 
   return {
     title: metadata.title,
-    headings: {
-      links: { id: 'links', text: 'Links' },
-      downloads: { id: 'downloads', text: 'Downloads' },
-    },
+    headings: metadata.headings,
     page,
   };
 };

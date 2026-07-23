@@ -1,7 +1,14 @@
-+++
-title = "Make It Through (Original composition)"
-date = 2024-05-17
-+++
+---
+title: "Make It Through (Original composition)"
+date: 2024-05-17
+headings:
+  links:
+    id: links
+    text: Links
+  downloads:
+    id: downloads
+    text: Downloads
+---
 
 <script lang="ts">
   let { data = {} } = $props();
