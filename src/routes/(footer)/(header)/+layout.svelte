@@ -17,7 +17,7 @@
   <div class="toc-container">
     <TableOfContents headings={page.data?.headings} />
   </div>
-  <div class="content">
+  <div class="content" class:wide={page.data?.wide}>
     <main>
       {@render children?.()}
     </main>
@@ -39,6 +39,10 @@
     margin: 0 auto;
     padding: 1em 2em;
     overflow-x: hidden;
+
+    &.wide {
+      max-width: 132ch;
+    }
   }
 
   main {
