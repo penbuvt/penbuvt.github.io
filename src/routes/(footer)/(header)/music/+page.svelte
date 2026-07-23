@@ -34,6 +34,24 @@
       image: 'https://files.penbuvt.ca/music/in-your-life/piano-solo/album-art.300px.png',
       imageAlt: 'Cover art',
     },
+    {
+      text: 'One Step Back, Two Steps Forward (Original composition)',
+      href: resolveRoute('/music/one-step-back/'),
+      image: 'https://files.penbuvt.ca/music/one-step-back/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
+    {
+      text: 'Flight of the HMS Luminary: Original Soundtrack',
+      href: resolveRoute('/music/hms-luminary/'),
+      image: 'https://files.penbuvt.ca/music/hms-luminary/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
+    {
+      text: 'Mountain (Concert band arrangement)',
+      href: resolveRoute('/music/mountain/'),
+      image: 'https://files.penbuvt.ca/music/mountain/album-art.300px.png',
+      imageAlt: 'Cover art',
+    },
   ];
 </script>
 
