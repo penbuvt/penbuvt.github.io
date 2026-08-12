@@ -23,7 +23,7 @@ This piece was preformed by Penbu and [Syzygy Altair][] on the piano and violin 
 [Syzygy Altair]: https://www.youtube.com/@SyzygyAltairCh
 [Mino]: https://www.instagram.com/rmino_36
 
-The score was created with [MuseScore 3](https://musescore.org/) and rendered with Muse Sounds.
+The score was created with [MuseScore 3](https://musescore.org/) and rendered with MuseScore General.
 
 Comments from Mino:
 
