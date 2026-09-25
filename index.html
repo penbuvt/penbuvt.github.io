@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PenbuVT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #498E4E;
+        /* Primary theme text color */
+        --primary-text-color: #000000;
+        --primary-text-color-over: #000;
+        /* Primary theme link color */
+        --primary-link-color: #204A87;
+        /* Secondary color: the background body color */
+        --secondary-color: #EEEEEC;
+        --secondary-text-color: #2E3436;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #498E4E;
+        --toc-background-color: white;
+        --code-color: #4a4a4a;
+        --code-background-color: white;
+
+        --shadow-color: #BABDB6;
+
+        /* Font used for headers (h1 & h2) */
+        --header-font-family: "Fira Sans", sans-serif;
+        /* Font used for text */
+        --text-font-family: "Fira Sans", sans-serif;
+    }
+
+    /* Disable dark theme for now
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --primary-color: #382929;
+            --primary-text-color: #d7d7d7;
+            --primary-text-color-over: #FFF;
+            --primary-link-color: #9b9b9b;
+            --secondary-color: #282828;
+            --secondary-text-color: #f2f2f2;
+            --toc-highlight-text-color: #f2f2f2;
+            --toc-background-color: #3a3a3a;
+            --code-color: white;
+            --code-background-color: #4a4a4a;
+
+            --shadow-color: #202020;
+            --header-font-family: "Fira Sans", sans-serif;
+            --text-font-family: "Fira Sans", sans-serif;
+        }
+    }
+    */
+</style>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://www.penbuvt.ca/juice.css">
+    
+    <link rel="stylesheet" href="https://www.penbuvt.ca/penbu.css">
+
+</head>
+
+<body>
+    
+
+
+<header>
+    
+<a href="https://www.penbuvt.ca">
+    <div class="logo">
+        <img src="https://www.penbuvt.ca/images/penbu-logo-gradient-large.png" alt="Penbu" class="logo-image" />
+    </div>
+</a>
+
+<nav>
+    <a class="nav-item subtitle-text" href="https://www.penbuvt.ca/portfolio/">Music</a>
+    <a class="nav-item subtitle-text" href="https://www.penbuvt.ca/schedule/">Schedule</a>
+</nav>
+
+</header>
+
+
+<div class="hero">
+    
+    <div class="hero-content">
+        <section class="hero-left text-center">
+            <h1 class="heading-text main-header">
+                <img class="hero-logo" src="https://www.penbuvt.ca/images/penbu-logo-gradient-large.png" alt="Penbu" />
+            </h1>
+            <h3 class="title-text">
+                Programming, puzzle-gaming, music-making vtuber on Linux.
+            </h3>
+            <div class="socials">
+                <a class="social-icon" rel="me" href="https://www.youtube.com/@PenbuVT" style="--color-src: url(https://www.penbuvt.ca/images/social-icons/youtube-color.svg);" title="YouTube">
+                    <img width="64" height="64" src="https://www.penbuvt.ca/images/social-icons/youtube.svg" alt="YouTube" />
+                </a>
+                <a class="social-icon" rel="me" href="https://twitch.tv/penbuvt" style="--color-src: url(https://www.penbuvt.ca/images/social-icons/twitch-color.svg);" title="Twitch">
+                    <img width="64" height="64" src="https://www.penbuvt.ca/images/social-icons/twitch.svg" alt="Twitch" />
+                </a>
+                <a class="social-icon" rel="me" href="https://discord.gg/X5XZDfBSPG" style="--color-src: url(https://www.penbuvt.ca/images/social-icons/discord-color.svg);" title="Discord">
+                    <img width="64" height="64" src="https://www.penbuvt.ca/images/social-icons/discord.svg" alt="Discord" />
+                </a>
+                <a class="social-icon" rel="me" href="https://twitter.com/penbuvt" style="--color-src: url(https://www.penbuvt.ca/images/social-icons/x-color.svg);" title="X (Twitter)">
+                    <img width="64" height="64" src="https://www.penbuvt.ca/images/social-icons/x.svg" alt="X (Twitter)" />
+                </a>
+                <a class="social-icon" rel="me" href="https://github.com/penbuvt" style="--color-src: url(https://www.penbuvt.ca/images/social-icons/github-color.svg);" title="GitHub">
+                    <img width="64" height="64" src="https://www.penbuvt.ca/images/social-icons/github.svg" alt="GitHub" />
+                </a>
+            </div>
+        </section>
+        <section class="hero-right">
+            <iframe class="featured-video" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=PXGk0Hhs4F723Dn2&amp;list=UUPV8mWVjn4ZXjlb3DVnL-bysQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </div>
+    
+    <a href="#features" id="explore-more" class="explore-more text">Explore More ⇩</a>
+    <script>
+        document.getElementById("explore-more").addEventListener("click", (event) => {
+            event.preventDefault();
+            const target = new URL(event.target.href).hash;
+            document.querySelector(target).scrollIntoView({ behavior: "smooth" });
+        }, true);
+    </script>
+</div>
+
+
+
+    <main>
+        
+        
+        
+        
+
+        <div class="content text">
+            
+<style>
+body > main {
+    display: none;
+}
+
+header .logo {
+    display: none;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.explore-more {
+    display: none !important;
+}
+</style>
+
+        </div>
+
+        
+        
+    </main>
+
+    
+<footer>
+    <small class="subtext">
+        © 2023-2025 PenbuVT. View the source on <a href="https:&#x2F;&#x2F;github.com&#x2F;penbuvt&#x2F;penbuvt.github.io">GitHub</a>.
+    </small>
+</footer>
+
+</body>
+<script>
+    const scrollHandler = entries => {
+        // Find the first entry which intersecting and ratio > 0.9 to highlight.
+        let entry = entries.find(entry => {
+            return entry.isIntersecting && entry.intersectionRatio > 0.9;
+        });
+        if (!entry) return;
+
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        // let url = new URL(`#${entry.target.id}`);
+        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
+        if (link) {
+            link.classList.add("active");
+            link.scrollIntoView({ behavior: "auto", block: "nearest" });
+        }
+    };
+    // Set -100px root margin to improve highlight experience.
+    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
+    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    items.forEach(item => observer.observe(item));
+</script>
+
+</html>
